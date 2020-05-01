@@ -10,10 +10,14 @@ const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: { main: './src/js/index.js' },
+    entry: {
+        index: './src/js/index.js',
+        about: './src/js/about.js',
+        analitics: './src/js/analitics.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js'
+        filename: '[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -62,12 +66,22 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/analitics.html',
+            filename: 'analitics.html'
+        }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: '[name].[chunkhash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
