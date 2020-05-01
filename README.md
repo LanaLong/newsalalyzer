@@ -8,5 +8,7 @@ Diploma
 Технологии:
 HTML / CSS / JS (ES15-16) / GIT / Webpack
 
+[Project preview](https://lanalong.github.io/newsalalyzer/)
+
 
 
