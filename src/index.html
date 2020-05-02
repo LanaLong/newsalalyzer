@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <div class="root">
+    <!-- <div class="root">
         <header class="header root__section">
-            <images src="<%= require('./images/searchBack.jpg').default %>" alt="logo" class="logo">
+            <img src="<%= require('./images/searchBack.jpg').default %>" alt="logo" class="logo">
         </header>
         <a class="mc" href="./about.html" target="_self">Обо мне</a>
         <a class="mc" href="./analitics.html" target="_self">Аналитика</a>
-    </div>
+    </div> -->
     <div class="page">
 
         <header class="header header_type_index">
@@ -60,11 +60,49 @@
 
         <section class="search-result">
             <div class="search-result__header">
-                <h2 class="search-result__title">Результаты поиска</h2>
+                <h2 class="search-result__header-title">Результаты поиска</h2>
                 <a href="analitics.html" class="search-result__link">Посмотреть аналитику</a>
-                <img src="<%=require('./images/icon/back.svg').default%>" alt="" class="search-result__icon_type_arrow">
+                <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow"
+                    class="search-result__icon_type_arrow">
             </div>
-            <div class="search-result__items"></div>
+            <div class="search-result__items">
+                <div class="search-result__item">
+                    <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image"
+                        class="search-result__image">
+                    <div class="search-result__info">
+                        <p class="search-result__date">2 августа, 2019</p>
+                        <h2 class="search-result__card-title">Национальное достояние – парки</h2>
+                        <h3 class="search-result__card-subtitle">В 2016 году Америка отмечала важный юбилей: сто лет
+                            назад здесь начала складываться система национальных парков –
+                            охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
+                    </div>
+                    <p class="search-result__source">Лента.ру</p>
+                </div>
+                <div class="search-result__item">
+                    <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image"
+                        class="search-result__image">
+                    <div class="search-result__info">
+                        <p class="search-result__date">2 августа, 2019</p>
+                        <h2 class="search-result__card-title">Лесные огоньки: история одной фотографии</h2>
+                        <h3 class="search-result__card-subtitle">Фотограф отвлеклась от освещения суровой политической
+                            реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                            из местных чудес природы.</h3>
+                    </div>
+                    <p class="search-result__source">Медуза</p>
+                </div>
+                <div class="search-result__item">
+                    <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image"
+                        class="search-result__image">
+                    <div class="search-result__info">
+                        <p class="search-result__date">2 августа, 2019</p>
+                        <h2 class="search-result__card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                        <h3 class="search-result__card-subtitle">Знаменитый фотограф снимает первозданные леса России,
+                            чтобы рассказать о необходимости их сохранения. В этот раз он
+                            отправился в Двинско-Пинежскую тайгу, где...</h3>
+                    </div>
+                    <p class="search-result__source">Риа</p>
+                </div>
+            </div>
             <button class="search-result__button">Показать еще</button>
         </section>
 
@@ -113,13 +151,7 @@
             </div>
         </footer>
 
-
-
     </div>
-
-
-
-
 
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
