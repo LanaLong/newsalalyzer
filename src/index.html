@@ -5,20 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Сервис для анализа происходящих в мире событий">
+    <meta name="author" lang="ru" content="LanaLong">
     <title>NewsAnalyzer</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+    <link rel="shortcut icon" href="<%=require('./img/favicon_io/favicon.ico').default%>" type="image/ico">
+    <!-- <link rel="import" href="./about/index.html">
+    <link rel="import" href="./analytics/index.html"> -->
 </head>
 
 <body>
-    <div class="root">
+    <!-- <div class="root">
         <header class="header root__section">
             <img src="<%= require('./img/searchBack.jpg').default %>" alt="logo" class="logo">
         </header>
         <a class="mc" href="./about.html" target="_self">Обо мне</a>
         <a class="mc" href="./analitics.html" target="_self">Аналитика</a>
-    </div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+    </div> -->
+    <div class="page">
+        <header class="header">
+            <nav class="nav">
 
+            </nav>
+        </header>
+        <main>
+            <article>
+                <section>
+
+                </section>
+            </article>
+
+        </main>
+        <footer class="footer">
+            <nav>
+
+            </nav>
+        </footer>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
 
 </html>
