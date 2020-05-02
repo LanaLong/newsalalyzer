@@ -25,6 +25,7 @@
     <div class="page">
 
         <header class="header header_type_index">
+
             <a href="analitics.html" class="logo logo_type_white">NewsAnalyzer</a>
             <nav class="nav">
                 <ul class="nav__items">
@@ -32,6 +33,7 @@
                     <li class="nav__item">О проекте</li>
                 </ul>
             </nav>
+
             <section class="search">
                 <h1 class="search__title">Что в мире творится?</h1>
                 <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
@@ -44,6 +46,40 @@
             </section>
 
         </header>
+
+        <section class="loader">
+            <i class="loader__icon"></i>
+            <p class="loader__text">Идет поиск новостей...</p>
+        </section>
+
+        <section class="no-results">
+            <img src="./images/not-found.svg" alt="Ничего не найдено" class="no-results_img">
+            <h3 class="no-results__title">Ничего не найдено</h3>
+            <p class="no-results__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
+        </section>
+
+        <section class="search-result">
+            <div class="search-result__header">
+                <h2 class="search-result__title">Результаты поиска</h2>
+                <a href="analitics.html" class="search-result__link">Посмотреть аналитику</a>
+                <img src="./images/back.svg" alt="" class="search-result__icon_type_arrow">
+            </div>
+            <div class="search-result__items"></div>
+            <button class="search-result__button">Показать еще</button>
+        </section>
+
+        <section class="about">
+            <img src="./images/avatar-big.png" alt="Аватар автора" class="about__avatar">
+            <div class="about__content">
+                <h2 class="about__title">Об авторе</h2>
+                <p class="about__subtitle">Это блок с описаением автора проекта. Здесь следует указать, как вас
+                    зовут,чем вы занимаетесь, какими технологиями разработки владете.</p>
+                <p class="about__subtitle">Также можно рассказать о процессе обучения в Практикуме, чему вы научились, и
+                    чем можете помочь потенциальным заказчикам.</p>
+            </div>
+        </section>
+
+
         <main>
             <article>
                 <section>
@@ -68,10 +104,10 @@
                 </ul>
                 <div class="footer__icons">
                     <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
-                        <images src="./images/gh.svg" class="footer__icon" alt="github">
+                        <img src="./images/gh.svg" class="footer__icon" alt="github">
                     </a>
                     <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
-                        <images src="./images/fb.svg" class="footer__icon" alt="facebook">
+                        <img src="./images/fb.svg" class="footer__icon" alt="facebook">
                     </a>
                 </div>
             </div>
