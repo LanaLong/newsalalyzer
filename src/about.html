@@ -10,16 +10,115 @@
 </head>
 
 <body>
-    <div class="root">
-        <header class="header root__section">
-            About
-            <!-- <images src="<%= require('./images/searchBack.jpg').default %>" alt="logo" class="logo"> -->
-        </header>
-        <a class="mc" href="./index.html" target="_self">Main</a>
-        <a class="mc" href="./analitics.html" target="_self">Аналитика</a>
-    </div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+    <a class="test" href="./index.html" target="_self">Main</a>
+    <a class="test" href="./analitics.html" target="_self">Аналитика</a>
+    <header class="header header_type_inner">
+        <a href="index.html" class="logo logo_type_inner">NewsAnalyzer</a>
+        <nav class="nav">
+            <ul class="nav__items">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link link">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link nav__link_type_active link">О проекте</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-content">
+            <h2 class="title page-content__title">Клиентам</h2>
+            <p class="page-content__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать,
+                чему
+                научился студент, какими технологиями владеет.</p>
+            <p class="page-content__text">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+                масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах,
+                выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+            <p class="page-content__text">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть
+                сайт
+                продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+            <p class="page-content__text">При создании проекта была использована сборка технологией Webpack. Это
+                современный
+                подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в
+                старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем
+                с
+                отображением. А значит, потенциальная аудитория возрастает.</p>
+            <p class="page-content__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен
+                сайт,
+                мы рекомендуем обратиться к этому студенту.</p>
+        </section>
 
+        <section class="tech">
+            <h2 class="title tech__title">Используемые технологии</h2>
+            <div class="tech__items">
+                <div class="tech__item">
+                    <p class="tech__name">Html</p>
+                    <img src="<%= require('./images/tech/html.svg').default %>" alt="Html5 logo" class="tech__image">
+                </div>
+            </div>
+            <div class="tech__items">
+                <div class="tech__item">
+                    <p class="tech__name">Css</p>
+                    <img src="<%= require('./images/tech/css.svg').default %>" alt="Css3 logo" class="tech__image">
+                </div>
+            </div>
+            <div class="tech__items">
+                <div class="tech__item">
+                    <p class="tech__name">Java Script</p>
+                    <img src="<%= require('./images/tech/js.svg').default %>" alt="Java Script logo"
+                        class="tech__image">
+                </div>
+            </div>
+            <div class="tech__items">
+                <div class="tech__item">
+                    <p class="tech__name">Webpack</p>
+                    <img src="<%= require('./images/tech/webpack.svg').default %>" alt="Webpack logo"
+                        class="tech__image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
+            <div class="about__content">
+                <h2 class="about__title">Об авторе</h2>
+                <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+                    зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились, и чем
+                    можете помочь потенциальным заказчикам.</p>
+            </div>
+        </section>
+
+        <section class="slider slider_type_git-commits">
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__copy">&copy; 2020 Supersite</p>
+            <ul class="footer__nav">
+                <li class="footer__item">
+                    <a class="footer__link" href="index.html">Главная</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="about.html">О проекте</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+                </li>
+            </ul>
+            <div class="footer__icons">
+                <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
+                    <img src="<%=require('./images/icon/gh.svg').default%>" class="footer__icon" alt="github">
+                </a>
+                <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
+                    <img src="<%=require('./images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 
 </html>
