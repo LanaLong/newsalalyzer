@@ -53,7 +53,7 @@
         </section>
 
         <section class="no-results">
-            <img src="../src/images/no-results.svg" alt="Ничего не найдено" class="no-results_img">
+            <img src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено" class="no-results_img">
             <h3 class="no-results__title">Ничего не найдено</h3>
             <p class="no-results__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
         </section>
@@ -62,9 +62,23 @@
             <div class="search-result__header">
                 <h2 class="search-result__title">Результаты поиска</h2>
                 <a href="analitics.html" class="search-result__link">Посмотреть аналитику</a>
-                <img src="../src/images/icon/back.svg" alt="" class="search-result__icon_type_arrow">
+                <img src="<%=require('./images/icon/back.svg').default%>" alt="" class="search-result__icon_type_arrow">
+            </div>
+            <div class="search-result__items"></div>
+            <button class="search-result__button">Показать еще</button>
+        </section>
+
+        <section class="about">
+            <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
+            <div class="about__content">
+                <h2 class="about__title">Об авторе</h2>
+                <p class="about__subtitle">Это блок с описаением автора проекта. Здесь следует указать, как вас
+                    зовут,чем вы занимаетесь, какими технологиями разработки владете.</p>
+                <p class="about__subtitle">Также можно рассказать о процессе обучения в Практикуме, чему вы научились, и
+                    чем можете помочь потенциальным заказчикам.</p>
             </div>
         </section>
+
 
         <main>
             <article>
@@ -90,10 +104,10 @@
                 </ul>
                 <div class="footer__icons">
                     <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
-                        <images src="<%=require('./images/icon/gh.svg').default %>" class="footer__icon" alt="github">
+                        <img src="<%=require('./images/icon/gh.svg').default%>" class="footer__icon" alt="github">
                     </a>
                     <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
-                        <images src="<%=require('./images/icon/fb.svg').default %>" class="footer__icon" alt="facebook">
+                        <img src="<%=require('./images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
                     </a>
                 </div>
             </div>
