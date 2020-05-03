@@ -1,0 +1,4 @@
+.nav__items {
+    list-style-type: none;
+    display: flex;
+}

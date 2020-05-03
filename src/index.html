@@ -20,8 +20,8 @@
 
     <div class="page">
         <header class="header header_type_index">
-            <a href="index.html" class="logo logo_type_index">NewsAnalyzer</a>
-            <nav class="nav">
+            <a href="index.html" class="logo logo_type_index link">NewsAnalyzer</a>
+            <nav class="nav nav_type_index">
                 <ul class="nav__items">
                     <li class="nav__item">
                         <a href="index.html" class="nav__link nav__link_type_active link">Главная</a>
@@ -34,12 +34,12 @@
 
             <section class="search">
                 <h1 class="search__title title">Что в мире творится?</h1>
-                <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
+                <p class="search__subtitle text">Введите в поиске любую тему и узнайте, насколько популярной она была в
                     новостях за прошедшую неделю.</p>
                 <form action="" name="search" class="search__form">
                     <input type="text" class="search__input" placeholder="Введите тему новости" minlength="3"
                         maxlength="20" required>
-                    <button class="search__button">Искать</button>
+                    <button class="search__button text">Искать</button>
                 </form>
             </section>
 
@@ -47,19 +47,19 @@
 
         <section class="loader">
             <i class="loader__icon"></i>
-            <p class="loader__text">Идет поиск новостей...</p>
+            <p class="loader__text text_type_minor">Идет поиск новостей...</p>
         </section>
 
         <section class="no-results">
             <img src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено" class="no-results__img">
             <h3 class="no-results__title title">Ничего не найдено</h3>
-            <p class="no-results__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
+            <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего не найдено.</p>
         </section>
 
         <section class="result">
             <div class="result__header">
                 <h2 class="result__header-title title">Результаты поиска</h2>
-                <a href="analitics.html" class="result__link">Посмотреть аналитику</a>
+                <a href="analitics.html" class="result__link text">Посмотреть аналитику &gt;</a>
                 <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow"
                     class="result__icon_type_arrow">
             </div>
@@ -68,38 +68,38 @@
                     <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="result__date">2 августа, 2019</p>
+                        <p class="result__date text_type_date">2 августа, 2019</p>
                         <h2 class="result__card-title title">Национальное достояние – парки</h2>
-                        <h3 class="result__text">В 2016 году Америка отмечала важный юбилей: сто лет
+                        <h3 class="result__text text">В 2016 году Америка отмечала важный юбилей: сто лет
                             назад здесь начала складываться система национальных парков –
                             охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
                     </div>
-                    <p class="result__source">Лента.ру</p>
+                    <p class="result__source text_type_label">Лента.ру</p>
                 </div>
                 <div class="result__item">
                     <img src="<%= require('./images/card/image_04.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="result__date">2 августа, 2019</p>
+                        <p class="result__date text_type_date">2 августа, 2019</p>
                         <h2 class="result__card-title title">Лесные огоньки: история одной фотографии</h2>
-                        <h3 class="result__text">Фотограф отвлеклась от освещения суровой политической
+                        <h3 class="result__text text">Фотограф отвлеклась от освещения суровой политической
                             реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                             из местных чудес природы.</h3>
                     </div>
-                    <p class="result__source">Медуза</p>
+                    <p class="result__source text_type_label">Медуза</p>
                 </div>
                 <div class="result__item">
                     <img src="<%= require('./images/card/image_07.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="result__date">2 августа, 2019</p>
+                        <p class="result__date text_type_date">2 августа, 2019</p>
                         <h2 class="result__card-title title">«Первозданная тайга»: новый фотопроект Игоря
                             Шпиленка</h2>
-                        <h3 class="result__text">Знаменитый фотограф снимает первозданные леса России,
+                        <h3 class="result__text text">Знаменитый фотограф снимает первозданные леса России,
                             чтобы рассказать о необходимости их сохранения. В этот раз он
                             отправился в Двинско-Пинежскую тайгу, где...</h3>
                     </div>
-                    <p class="result__source">Риа</p>
+                    <p class="result__source text_type_label">Риа</p>
                 </div>
             </div>
             <button class="result__button">Показать еще</button>
