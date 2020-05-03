@@ -15,11 +15,10 @@
 </head>
 
 <body>
-    <a class="test" href="./about.html" target="_self">Обо мне</a>
-    <a class="test" href="./analitics.html" target="_self">Аналитика</a>
+    <!-- <a class="test" href="./about.html" target="_self">Обо мне</a>
+    <a class="test" href="./analitics.html" target="_self">Аналитика</a> -->
 
     <div class="page">
-
         <header class="header header_type_index">
             <a href="index.html" class="logo logo_type_index">NewsAnalyzer</a>
             <nav class="nav">
@@ -52,67 +51,68 @@
         </section>
 
         <section class="no-results">
-            <img src="./images/not-found.svg" alt="Ничего не найдено" class="no-results_img">
+            <img src="./images/not-found.svg" alt="Ничего не найдено" class="no-results__img">
             <h3 class="no-results__title title">Ничего не найдено</h3>
             <p class="no-results__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
         </section>
 
-        <section class="search-result">
-            <div class="search-result__header">
-                <h2 class="search-result__header-title title">Результаты поиска</h2>
-                <a href="analitics.html" class="search-result__link">Посмотреть аналитику</a>
+        <section class="result">
+            <div class="result__header">
+                <h2 class="result__header-title title">Результаты поиска</h2>
+                <a href="analitics.html" class="result__link">Посмотреть аналитику</a>
                 <img src="./images/back.svg" alt="Back arrow"
-                    class="search-result__icon_type_arrow">
+                    class="result__icon_type_arrow">
             </div>
-            <div class="search-result__items">
-                <div class="search-result__item">
+            <div class="result__items">
+                <div class="result__item">
                     <img src="./images/image_08.jpg" alt="Card image"
-                        class="search-result__image">
-                    <div class="search-result__info">
-                        <p class="search-result__date">2 августа, 2019</p>
-                        <h2 class="search-result__card-title title">Национальное достояние – парки</h2>
-                        <h3 class="search-result__text">В 2016 году Америка отмечала важный юбилей: сто лет
+                        class="result__image">
+                    <div class="result__info">
+                        <p class="result__date">2 августа, 2019</p>
+                        <h2 class="result__card-title title">Национальное достояние – парки</h2>
+                        <h3 class="result__text">В 2016 году Америка отмечала важный юбилей: сто лет
                             назад здесь начала складываться система национальных парков –
                             охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
                     </div>
-                    <p class="search-result__source">Лента.ру</p>
+                    <p class="result__source">Лента.ру</p>
                 </div>
-                <div class="search-result__item">
+                <div class="result__item">
                     <img src="./images/image_04.jpg" alt="Card image"
-                        class="search-result__image">
-                    <div class="search-result__info">
-                        <p class="search-result__date">2 августа, 2019</p>
-                        <h2 class="search-result__card-title title">Лесные огоньки: история одной фотографии</h2>
-                        <h3 class="search-result__text">Фотограф отвлеклась от освещения суровой политической
+                        class="result__image">
+                    <div class="result__info">
+                        <p class="result__date">2 августа, 2019</p>
+                        <h2 class="result__card-title title">Лесные огоньки: история одной фотографии</h2>
+                        <h3 class="result__text">Фотограф отвлеклась от освещения суровой политической
                             реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                             из местных чудес природы.</h3>
                     </div>
-                    <p class="search-result__source">Медуза</p>
+                    <p class="result__source">Медуза</p>
                 </div>
-                <div class="search-result__item">
+                <div class="result__item">
                     <img src="./images/image_07.jpg" alt="Card image"
-                        class="search-result__image">
-                    <div class="search-result__info">
-                        <p class="search-result__date">2 августа, 2019</p>
-                        <h2 class="search-result__card-title title">«Первозданная тайга»: новый фотопроект Игоря
+                        class="result__image">
+                    <div class="result__info">
+                        <p class="result__date">2 августа, 2019</p>
+                        <h2 class="result__card-title title">«Первозданная тайга»: новый фотопроект Игоря
                             Шпиленка</h2>
-                        <h3 class="search-result__text">Знаменитый фотограф снимает первозданные леса России,
+                        <h3 class="result__text">Знаменитый фотограф снимает первозданные леса России,
                             чтобы рассказать о необходимости их сохранения. В этот раз он
                             отправился в Двинско-Пинежскую тайгу, где...</h3>
                     </div>
-                    <p class="search-result__source">Риа</p>
+                    <p class="result__source">Риа</p>
                 </div>
             </div>
-            <button class="search-result__button">Показать еще</button>
+            <button class="result__button">Показать еще</button>
         </section>
 
         <section class="about">
             <img src="./images/avatar-big.png" alt="Аватар автора" class="about__avatar">
             <div class="about__content">
-                <h2 class="about__title">Об авторе</h2>
-                <p class="about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+                <h2 class="about__title title">Об авторе</h2>
+                <p class="about__text text">Это блок с описанием автора проекта. Здесь следует указать, как вас
                     зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                <p class="about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились, и чем
+                <p class="about__text text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
+                    и чем
                     можете помочь потенциальным заказчикам.</p>
             </div>
         </section>
