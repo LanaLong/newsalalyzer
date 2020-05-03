@@ -10,14 +10,119 @@
 </head>
 
 <body>
-    <div class="root">
-        <header class="header root__section">
-            Analitics
-            <!-- <images src="<%= require('./images/searchBack.jpg').default %>" alt="logo" class="logo"> -->
-        </header>
-        <a class="mc" href="./about.html" target="_self">Обо мне</a>
-        <a class="mc" href="./index.html" target="_self">Main</a>
-    </div>
+
+    <a class="mc" href="./about.html" target="_self">Обо мне</a>
+    <a class="mc" href="./index.html" target="_self">Main</a>
+    <header class="header header_type_inner">
+        <a href="index.html" class="logo logo_type_inner">NewsAnalyzer</a>
+        <nav class="nav">
+            <ul class="nav__items">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link link">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link nav__link_type_active link">О проекте</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="breadcrumbs">
+            <ul class="breadcrumbs__items">
+                <li class="breadcrumbs__item">
+                    <a href="./index.html" class="breadcrumbs__link">Главная</a>
+                    <a href="./analitics.html" class="breadcrumbs__link breadcrumbs__link_disabled">Аналитика</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="page-header">
+            <h2 class="page-header__title title">Вы спросили "<span class="request-info">Путешествия</span>"</h2>
+            <p class="page-header__info">Новостей за неделю: <span class="request-info_type_number">129</span></p>
+            <p class="page-header__info">Упоминаний в заголовках: <span class="request-info_type_number">114</span></p>
+        </section>
+
+        <section class="scheme">
+            <h3 class="scheme__title title">Аналитика по дням</h3>
+            <div class="scheme__chart">
+                <div class="scheme__header">
+                    <div class="scheme__cell-title scheme__cell-title_lable_data">дата (август)</div>
+                    <div class="scheme__cell-title scheme__cell-title_lable_quality">кол-во упоминаний</div>
+                </div>
+                <div class="scheme__scale">
+                    <p class="scheme__scale_value">0</p>
+                    <p class="scheme__scale_value">25</p>
+                    <p class="scheme__scale_value">50</p>
+                    <p class="scheme__scale_value">75</p>
+                    <p class="scheme__scale_value">100</p>
+                </div>
+                <div class="scheme__info">
+                    <div class="scheme__info_type_data">
+                        <div class="scheme__data-item">19, пн</div>
+                        <div class="scheme__data-item">20, вт</div>
+                        <div class="scheme__data-item">21, ср</div>
+                        <div class="scheme__data-item">22, чт</div>
+                        <div class="scheme__data-item">23, пт</div>
+                        <div class="scheme__data-item">24, сб</div>
+                        <div class="scheme__data-item">25, вс</div>
+                    </div>
+                    <div class="scheme__info_type_barchart">
+                        <div class="scheme__barchart-item">15</div>
+                        <div class="scheme__barchart-item">18</div>
+                        <div class="scheme__barchart-item">11</div>
+                        <div class="scheme__barchart-item">39</div>
+                        <div class="scheme__barchart-item">45</div>
+                        <div class="scheme__barchart-item">73</div>
+                        <div class="scheme__barchart-item">34</div>
+                    </div>
+                </div>
+            </div>
+            <div class="barchart__columns">
+                <div class="barchart__day">
+                    <p class="barchart__list"></p>
+                </div>
+                <div class="barchart__scale">
+                    <p class="barchart__scale-value barchart__name-axis">0</p>
+                    <p class="barchart__scale-value barchart__name-axis">25</p>
+                    <p class="barchart__scale-value barchart__name-axis">50</p>
+                    <p class="barchart__scale-value barchart__name-axis">75</p>
+                    <p class="barchart__scale-value barchart__name-axis">100</p>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
+        </section>
+
+
+
+
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__copy">&copy; 2020 Supersite</p>
+            <ul class="footer__nav">
+                <li class="footer__item">
+                    <a class="footer__link" href="index.html">Главная</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="about.html">О проекте</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+                </li>
+            </ul>
+            <div class="footer__icons">
+                <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
+                    <img src="<%=require('./images/icon/gh.svg').default%>" class="footer__icon" alt="github">
+                </a>
+                <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
+                    <img src="<%=require('./images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
 
 </body>
