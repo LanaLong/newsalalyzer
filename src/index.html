@@ -50,14 +50,14 @@
     </section>
 
     <section class="loader">
-        <i class="loader__icon"></i>
+        <img src="<%=require('./images/load-icon.png').default%>" class="loader__icon" />
         <p class="loader__text text_type_minor">Идет поиск новостей...</p>
     </section>
 
     <section class="no-results">
         <img src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено" class="no-results__img">
-        <h3 class="no-results__title title">Ничего не найдено</h3>
-        <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего не найдено.</p>
+        <h3 class="title no-results__title">Ничего не найдено</h3>
+        <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.</p>
     </section>
 
     <section class="result">
