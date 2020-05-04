@@ -1,3 +1,6 @@
+@import url(_type/logo_type_index.css);
+@import url(_type/logo_type_inner.css);
+
 .logo {
     font-family: Roboto Slab;
     font-style: normal;
