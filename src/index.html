@@ -62,21 +62,23 @@
 
     <section class="result">
         <div class="result__header">
-            <h2 class="result__header-title title">Результаты поиска</h2>
-            <a href="analitics.html" class="result__link text">Посмотреть аналитику &gt;</a>
-            <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="result__icon_type_arrow">
+            <h2 class="title result__header-title">Результаты поиска</h2>
+            <div class="result__link-container">
+                <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
+                <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="result__icon">
+            </div>
         </div>
         <div class="result__items">
             <div class="result__item">
                 <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image" class="result__image">
                 <div class="result__info">
-                    <p class="result__date text_type_date">2 августа, 2019</p>
-                    <h2 class="result__card-title title">Национальное достояние – парки</h2>
-                    <h3 class="result__text text">В 2016 году Америка отмечала важный юбилей: сто лет
+                    <p class="text_type_date result__date">2 августа, 2019</p>
+                    <h2 class="title result__card-title">Национальное достояние – парки</h2>
+                    <h3 class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет
                         назад здесь начала складываться система национальных парков –
                         охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
+                    <p class="result__source text_type_label">Лента.ру</p>
                 </div>
-                <p class="result__source text_type_label">Лента.ру</p>
             </div>
             <div class="result__item">
                 <img src="<%= require('./images/card/image_04.jpg').default %>" alt="Card image" class="result__image">

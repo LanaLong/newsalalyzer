@@ -1,0 +1,6 @@
+.result__items {
+     max-width: 1232px;
+     display: flex;
+     justify-content: space-between;
+     margin: auto;
+}

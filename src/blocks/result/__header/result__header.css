@@ -1,0 +1,7 @@
+.result__header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1232px;
+    margin: auto;
+    padding-bottom: 64px;
+}
