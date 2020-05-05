@@ -1,0 +1,7 @@
+.slider__item {
+    width: 400px;
+    height: 288px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 0 8px;
+}

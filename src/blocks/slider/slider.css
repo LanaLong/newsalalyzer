@@ -5,3 +5,10 @@
 @import url(__text/slider__text.css);
 @import url(__title/slider__title.css);
 @import url(_type/slider_type_gitlog.css);
+
+.slider {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
