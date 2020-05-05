@@ -10,5 +10,8 @@
     list-style-type: none;
     margin: 0;
     display: flex;
+    overflow: hidden;
+    left: -200px;
+    transform: translate3d(-200px);
     /* justify-content: space-evenly; */
 }

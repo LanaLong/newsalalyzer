@@ -1,8 +1,7 @@
 .text_type_label {
-    font-family: Roboto Slab, Arial, Helvetica, sans-serif;;
+    font-family: Roboto Slab, Times New Roman, Times, serif;
     font-style: normal;
     font-weight: bold; 
     color: #B6BCBF;
-    /* margin: 0; */
     padding: 0;
 }

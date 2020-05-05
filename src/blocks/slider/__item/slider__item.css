@@ -4,4 +4,7 @@
     background: #FFFFFF;
     border-radius: 16px;
     padding: 0 8px;
+    margin-left: 16px;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
