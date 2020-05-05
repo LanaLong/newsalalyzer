@@ -8,7 +8,7 @@
     <meta name="description" content="Сервис для анализа происходящих в мире событий">
     <meta name="author" lang="ru" content="LanaLong">
     <title>NewsAnalyzer</title>
-    <link rel="stylesheet" href="index.ab0dcde76bdc6234be7b.css">
+    <link rel="stylesheet" href="./styles/index.ab0dcde76bdc6234be7b.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/ico">
     <!-- <link rel="import" href="./about/index.html">
     <link rel="import" href="./analytics/index.html"> -->
@@ -77,8 +77,8 @@
                     <h3 class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет
                         назад здесь начала складываться система национальных парков –
                         охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
-                    <p class="result__source text_type_label">Лента.ру</p>
                 </div>
+                <p class="text_type_label result__source">Лента.ру</p>
             </div>
             <div class="result__item">
                 <img src="./images/image_04.jpg" alt="Card image" class="result__image">
@@ -89,7 +89,7 @@
                         реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                         из местных чудес природы.</h3>
                 </div>
-                <p class="result__source text_type_label">Медуза</p>
+                <p class="text_type_label result__source">Медуза</p>
             </div>
             <div class="result__item">
                 <img src="./images/image_07.jpg" alt="Card image" class="result__image">
@@ -104,19 +104,23 @@
                 <p class="result__source text_type_label">Риа</p>
             </div>
         </div>
-        <button class="result__button">Показать еще</button>
+        <button class="text result__button">Показать еще</button>
     </section>
 
     <section class="about">
-        <img src="./images/avatar-big.png" alt="Аватар автора" class="about__avatar">
-        <div class="about__content">
-            <h2 class="about__title title">Об авторе</h2>
-            <p class="about__text text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+        <picture class="about__avatar">
+            <source srcset="./images/avatar-mobile.png" media="(max-width: 475px)">
+            <img src="./images/avatar-big.png" alt="Аватар автора" class="about__avatar">
+        </picture>
+
+        <article class="about__content">
+            <h2 class="title about__title">Об авторе</h2>
+            <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
                 зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-            <p class="about__text text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
+            <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
                 и чем
                 можете помочь потенциальным заказчикам.</p>
-        </div>
+        </article>
     </section>
 
     </main>
@@ -144,7 +148,7 @@
             </div>
         </div>
     </footer>
-    <script src="index.ab0dcde76bdc6234be7b.js"></script>
+    <script src="./script/index.ab0dcde76bdc6234be7b.js"></script>
 </body>
 
 </html>
