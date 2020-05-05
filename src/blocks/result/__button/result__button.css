@@ -1,0 +1,12 @@
+.result__button {
+    border-radius: 50px;
+    border: 0;
+    background-color: #fff;
+    display: flex;
+    margin: auto;
+    padding: 20px 84px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}

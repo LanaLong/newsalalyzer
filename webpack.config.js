@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './script/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -55,7 +55,7 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
             },
 
         ]
@@ -81,7 +81,7 @@ module.exports = {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[chunkhash].css'
+            filename: './styles/[name].[chunkhash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,

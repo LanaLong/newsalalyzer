@@ -1,2 +1,7 @@
+# main
 dist
 node_modules
+
+# spec
+Thumbs.db
+.DS_Store*
