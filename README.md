@@ -1,14 +1,51 @@
-Yandex Praktikum ***2020***
+Yandex Praktikum **2020**
 ====
-Diploma
----
+Diploma 
 [![](https://img.shields.io/badge/version-1.0.1-green)](https://img.shields.io/badge/version-1.0.1-green)
-Данный проект – сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны новости на определённую тему.
+===
 
-Технологии:
-HTML / CSS / JS (ES15-16) / GIT / Webpack
-
-[Project preview](https://lanalong.github.io/newsalalyzer/)
+Author / student Yandex Praktikum (09 flow): LanaLong
+---
 
 
+**`NewsAnalizer`** / project name
 
+This project is a service for analyzing events in the world. Its task is to establish how popular the news is on a particular topic.
+
+Project structure
+-
+*`Main`  page* (index) / allows to search news for the last week, contains author's information;
+
+*Page  `About`* (about) / contains project information, slider with the GitHub commits;
+
+*Page  `Analitics`* (analitics) / contains chartbar scheme with data of your search request.
+
+
+This project contains techs:
+
+HTML / CSS / JS (ES15-16) / GIT / Webpack (hot reloader: dev version) / work with API
+
+[Project preview](https://lanalong.github.io/newsalalyzer/) on GitHub Pages  [&gt;&gt;](https://lanalong.github.io/newsalalyzer/)
+
+
+Build setup:
+-
+#Download repository: 
+
+`git clone https://github.com/LanaLong/newsanalyzer.git`
+
+#Install dependencies:
+
+`npm i`
+
+#Dev version on server with hot reload at http://localhost:8080/: 
+
+`npm run dev`
+
+#Output files to dist folder: 
+
+`npm run build`
+
+#To deploy the project on [GitHub Pages](https://LanaLong.github.io/newsanalyzer):
+
+`npm run deploy`
