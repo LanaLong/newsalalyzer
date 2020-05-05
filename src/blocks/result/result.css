@@ -11,6 +11,7 @@
 @import url(__icon/result__icon.css);
 @import url(__link/result__link.css);
 @import url(__link-container/result__link-container.css);
+@import url(__header-title/result__header-title.css);
 
 .result {
     background: #F5F6F7;
