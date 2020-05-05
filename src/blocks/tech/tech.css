@@ -3,3 +3,9 @@
 @import url(__items/tech__items.css);
 @import url(__name/tech__name.css);
 @import url(__title/tech__title.css);
+@import url(__content/tech__content.css);
+
+.tech {
+    background-color: #f5f6f7;
+    padding: 80px;
+}
