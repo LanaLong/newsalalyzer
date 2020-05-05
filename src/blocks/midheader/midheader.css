@@ -1,2 +1,8 @@
 @import url(__info/midheader__info.css);
 @import url(__title/midheader__title.css);
+
+.midheader {
+    padding-top: 80px;
+    max-width: 1232px;
+    margin: auto;
+}

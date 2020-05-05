@@ -1,0 +1,10 @@
+.midheader__info {
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    margin: 0;
+}
+
+.midheader__info:first-child {
+    padding-bottom: 4px;
+}
