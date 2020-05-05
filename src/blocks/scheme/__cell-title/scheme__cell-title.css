@@ -1,0 +1,12 @@
+.scheme__cell-title {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}
+
+.scheme__cell-title:first-child {
+    max-width: 64px;
+    padding-right: 40px;
+}

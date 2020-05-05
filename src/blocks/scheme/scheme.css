@@ -1,12 +1,17 @@
-@import url(__barchart-item/scheme__barchart-item.css);
 @import url(__cell-title/scheme__cell-title.css);
-@import url(__cell-title/_lable/scheme__cell-title_lable_data.css);
-@import url(__cell-title/_lable/scheme__cell-title_lable_number.css);
 @import url(__chart/scheme__chart.css);
 @import url(__data-item/scheme__data-item.css);
 @import url(__header/scheme__header.css);
-@import url(__info/scheme__info.css);
-@import url(__info/_type/scheme__info_type_barchart.css);
-@import url(__info/_type/scheme__info_type_data.css);
-@import url(__scale/_value/scheme__scale_value.css);
+@import url(__item/scheme__item.css);
+@import url(__items/scheme__items.css);
+@import url(__scale/scheme__scale.css);
+@import url(__scale-value/scheme__scale-value.css);
 @import url(__title/scheme__title.css);
+@import url(__barchart-item/scheme__barchart-item.css);
+@import url(__value-item/scheme__value-item.css);
+
+.scheme {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: #F5F6F7;
+}

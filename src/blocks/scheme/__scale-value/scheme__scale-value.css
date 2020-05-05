@@ -1,0 +1,7 @@
+.scheme__scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 104px;
+    color: #B6BCBF;
+}

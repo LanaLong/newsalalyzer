@@ -1,0 +1,7 @@
+.scheme__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1A1B22;
+}
