@@ -1,4 +1,5 @@
 .result__item {
+    position: relative;
     width: 400px;
     height: 576px;
     background: #FFFFFF;
