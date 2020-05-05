@@ -108,15 +108,19 @@
     </section>
 
     <section class="about">
-        <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
-        <div class="about__content">
-            <h2 class="about__title title">Об авторе</h2>
-            <p class="about__text text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+        <picture class="about__avatar">
+            <source srcset="<%=require('./images/avatar-mobile.png').default%>" media="(max-width: 475px)">
+            <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
+        </picture>
+
+        <article class="about__content">
+            <h2 class="title about__title">Об авторе</h2>
+            <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
                 зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-            <p class="about__text text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
+            <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
                 и чем
                 можете помочь потенциальным заказчикам.</p>
-        </div>
+        </article>
     </section>
 
     </main>
