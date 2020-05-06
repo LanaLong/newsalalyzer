@@ -34,9 +34,15 @@ Build setup:
 
 `git clone https://github.com/LanaLong/newsanalyzer.git`
 
+#[If you dasn't have [Node.js](https://nodejs.org/en/) – install it]
+
 #Install dependencies:
 
 `npm i`
+
+#[If your OS is Windows – install win-node-env]
+
+`npm install --save-dev win-node-env`
 
 #Dev version on server with hot reload at http://localhost:8080/: 
 
@@ -46,6 +52,6 @@ Build setup:
 
 `npm run build`
 
-#To deploy the project on [GitHub Pages](https://LanaLong.github.io/newsanalyzer):
+#To deploy the project on [GitHub Pages](https://lanalong.github.io/newsalalyzer/):
 
 `npm run deploy`
