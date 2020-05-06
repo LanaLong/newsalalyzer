@@ -5,3 +5,7 @@
     height: 24px;
     padding-bottom: 56px;
 }
+
+.scheme__item:last-of-type {
+    padding-bottom: 0;
+}

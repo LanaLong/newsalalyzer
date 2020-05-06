@@ -1,10 +1,10 @@
 .slider__item {
     width: 400px;
     height: 288px;
-    background: #FFFFFF;
+    background: #FFF;
     border-radius: 16px;
     padding: 0 8px;
     margin-left: 16px;
-    box-sizing: border-box;
-    flex-shrink: 0;
+    /* box-sizing: border-box; */
+    /* flex-shrink: 0; */
 }

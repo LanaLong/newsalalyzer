@@ -1,6 +1,6 @@
 .scheme__data-item {
     font-size: 18px;
-    line-height: 80px;
     color: #1A1B22;
-    padding-right: 55px;
+    padding-right: 50px;
+    width: 60px;
 }

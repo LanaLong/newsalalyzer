@@ -4,6 +4,7 @@
     letter-spacing: 0.4px;
     text-transform: uppercase;
     color: #B6BCBF;
+    padding-bottom: 12px;
 }
 
 .scheme__cell-title:first-child {

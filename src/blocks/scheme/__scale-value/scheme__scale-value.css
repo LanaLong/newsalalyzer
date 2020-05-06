@@ -1,7 +1,4 @@
-.scheme__scale {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 104px;
-    color: #B6BCBF;
+.scheme__scale-value {
+padding: 0;
+margin: 0;
 }
