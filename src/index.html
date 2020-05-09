@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Сервис для анализа происходящих в мире событий">
+    <meta name="keywords"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | новости, анализ новостей, сервис новостей, события, информация о событиях, новости недели">
+    <meta name="description"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | News analizing service">
     <meta name="author" lang="ru" content="LanaLong">
-    <title>NewsAnalyzer</title>
+
+    <title>NewsAnalyzer | Главная</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
     <link rel="shortcut icon" href="<%=require('./images/favicon_io/favicon.ico').default%>" type="image/ico">
 </head>
@@ -46,8 +50,11 @@
     </section>
 
     <section class="loader">
-        <img src="<%=require('./images/load-icon.png').default%>" class="loader__icon" />
-        <p class="loader__text text_type_minor">Идет поиск новостей...</p>
+        <!-- <img src="<%=require('./images/load-icon.png').default%>" class="loader__icon" /> -->
+        <div class="loader__container">
+            <i class="loader__icon"></i>
+            <p class="loader__text text_type_minor">Идет поиск новостей...</p>
+        </div>
     </section>
 
     <section class="no-results">
