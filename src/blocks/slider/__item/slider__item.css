@@ -7,7 +7,6 @@
     margin: 0 auto;
     box-sizing: border-box;
     transition: box-shadow .3s ease;
-    /* max-width: 100%; */
 }
 
 .slider__item:hover {
