@@ -8,6 +8,8 @@
 @import url(_type/slider_type_gitlog.css);
 @import url(__swiper-container/slider___swiper-container.css);
 @import url(__swiper-slide/slider__swiper-slide.css);
+@import url(__slide-item/slider__slide-item.css);
+@import url(__swiper-wrapper/slider__swiper-wrapper.css);
 
 
 .slider {

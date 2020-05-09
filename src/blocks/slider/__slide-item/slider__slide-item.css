@@ -1,0 +1,11 @@
+.slider__slide-item {
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 24px;
+    min-height: 288px;
+    /* max-width: 100%; */
+    min-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: box-shadow .3s ease;
+}
