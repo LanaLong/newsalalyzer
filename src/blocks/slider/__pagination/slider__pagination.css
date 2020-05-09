@@ -1,3 +1,28 @@
 .slider__pagination {
-    
+  position: relative;
+  margin-top: 20px;
+}
+
+.slider__pagination {
+  background-color:  rgba(26, 27, 34, 1);
+}
+
+.swiper-pagination-bullet-active {
+  background-color:  rgba(26, 27, 34, 1);
+}
+
+@media screen and (max-width:768px) {
+
+  .slider__pagination {
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width:576px) {
+
+  .slider__pagination {
+    margin-top: 2px;
+  }
+
 }

@@ -1,3 +1,42 @@
 .slider__button-next {
+    top: calc(50% - 20px);
+    outline: none;
+    width: 40px;
+    height: 40px;
+    color: rgba(255, 255,255, 1);
+    background-color: rgba(26, 27, 34, 1);
+    border-radius: 50%;
+    transition: background-color .3s ease;
+}
+
+.slider__button-next:after {
+    display: block;
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    margin-right: 2px;
+    border: 2px solid rgba(255, 255,255, 1);
+    border-top: none;
+    border-left: none;
+    transform: rotate(-45deg);
+}
+
+.slider__button-next:hover {
+   background-color: rgba(26, 27, 34, .7);
+}
+
+@media screen and (max-width:768px) {
+
+  .slider__button-next {
+    top: calc(50% - 10px);
+  }
+
+}
+
+@media screen and (max-width:576px) {
+
+  .slider__button-next {
+    display: none;
+  }
 
 }
