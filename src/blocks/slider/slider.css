@@ -5,12 +5,17 @@
 @import url(__text/slider__text.css);
 @import url(__title/slider__title.css);
 @import url(_type/slider_type_gitlog.css);
+@import url(_type/slider_type_gitlog.css);
+@import url(__swiper-container/slider___swiper-container.css);
+@import url(__swiper-slide/slider__swiper-slide.css);
+
 
 .slider {
-    list-style-type: none;
+    /* list-style-type: none;
     margin: 0;
     display: flex;
     overflow: hidden;
     left: -200px;
-    transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0); */
+
 }

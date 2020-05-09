@@ -98,7 +98,7 @@
 
 
 
-        <section class="glide gitlog" id="intro">
+        <section class="gitlog">
             <div class="gitlog__header">
                 <h2 class="title gitlog__title">История коммитов из&nbsp;GitHub</h2>
                 <a class="link gitlog__link" href="https://github.com/LanaLong" target="_blank">
@@ -108,80 +108,51 @@
                     <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="gitlog__icon">
                 </a>
             </div>
-            <div class="swiper-container">
 
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <p class="slider__data">14 августа, 2019</p>
-                        <img src="" alt="" class="slider__avatar">
-                        <h3 class="slider__title title">Антон Долинин</h3>
-                        <p class="slider__email">anton@yandex.ru</p>
-                        <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
-                            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+            <div class="slider">
+                <div class="swiper-container slider__swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slider__swiper-slide">
+                            <p class="slider__data">14 августа, 2019</p>
+                            <img src="" alt="" class="slider__avatar">
+                            <h3 class="slider__title title">Антон Долинин</h3>
+                            <p class="slider__email">anton@yandex.ru</p>
+                            <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
+                                developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                        </div>
+                        <div class="swiper-slide slider__swiper-slide">
+                            <p class="slider__data">14 августа, 2019</p>
+                            <img src="" alt="" class="slider__avatar">
+                            <h3 class="slider__title title">Антон Долинин</h3>
+                            <p class="slider__email">anton@yandex.ru</p>
+                            <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
+                                developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                        </div>
+                        <div class="swiper-slide slider__swiper-slide">
+                            <p class="slider__data">14 августа, 2019</p>
+                            <img src="" alt="" class="slider__avatar">
+                            <h3 class="slider__title title">Антон Долинин</h3>
+                            <p class="slider__email">anton@yandex.ru</p>
+                            <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
+                                developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                        </div>
+
                     </div>
-                    <div class="swiper-slide">
-                        <p class="slider__data">14 августа, 2019</p>
-                        <img src="" alt="" class="slider__avatar">
-                        <h3 class="slider__title title">Антон Долинин</h3>
-                        <p class="slider__email">anton@yandex.ru</p>
-                        <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
-                            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p class="slider__data">14 августа, 2019</p>
-                        <img src="" alt="" class="slider__avatar">
-                        <h3 class="slider__title title">Антон Долинин</h3>
-                        <p class="slider__email">anton@yandex.ru</p>
-                        <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
-                            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
 
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-
             </div>
 
         </section>
-
-
-
-        <!-- <section class="glide gitlog" id="intro">
-            <div class="gitlog__header">
-                <h2 class="title gitlog__title">История коммитов из GitHub</h2>
-                <a class="link gitlog__link" href="https://github.com/LanaLong" target="_blank">
-                    <p class="text gitlog__link-text">Открыть в Github &#62;</p>
-                    <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="gitlog__icon">
-                </a>
-            </div>
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides slider slider_type_gitlog">
-                    <li class="slider__item glide__slide">
-                        <p class="slider__data">14 августа, 2019</p>
-                        <img src="" alt="" class="slider__avatar">
-                        <h3 class="slider__title title">Антон Долинин</h3>
-                        <p class="slider__email">anton@yandex.ru</p>
-                        <p class="slider__text text">Emmet (formerly Zen Coding) is a web-
-                            developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                    </li>
-                    
-
-                </ul>
-                <div data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
-                </div>
-            </div>
-            <div class="glide__bullets" data-glide-el="controls[nav]"></div>
-        </section> -->
 
 
     </main>

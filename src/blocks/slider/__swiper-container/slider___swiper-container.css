@@ -1,0 +1,19 @@
+.slider___swiper-container {
+    /* display: flex;
+    justify-content: space-between;
+    overflow: hidden; */
+    padding-left: 88px;
+    padding-right: 88px;
+    position: relative;
+}
+
+.slider__swiper-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px;
+    height: 100%;
+    background: linear-gradient(270deg,rgba(245,246,247,0) 0,#f5f6f7);
+    content: "";
+    z-index: 10;
+}
