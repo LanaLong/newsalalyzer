@@ -17,3 +17,14 @@
     content: "";
     z-index: 10;
 }
+.slider__swiper-container:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 88px;
+    height: 100%;
+    background: linear-gradient(90deg,rgba(245,246,247,0) 0,#f5f6f7);
+    content: "";
+    z-index: 10;
+}
+

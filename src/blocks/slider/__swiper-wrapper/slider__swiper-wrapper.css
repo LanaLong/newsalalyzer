@@ -6,4 +6,5 @@
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+    transform: translateX(-200px);
 }
