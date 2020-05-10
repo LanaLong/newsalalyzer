@@ -10,6 +10,7 @@
 @import url(__barchart-item/scheme__barchart-item.css);
 @import url(__value-item/scheme__value-item.css);
 @import url(__container/scheme__container.css);
+@import url(__bar-container/scheme__bar-container.css);
 @import url(__value-bar/scheme__value-bar.css);
 
 

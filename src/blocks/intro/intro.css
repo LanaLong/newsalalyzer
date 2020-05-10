@@ -1,8 +1,7 @@
 @import url(__text/intro__text.css);
 @import url(__title/intro__title.css);
+@import url(__container/intro__container.css);
 
 .intro {
-    max-width: 1232px;
-    margin: auto;
     padding: 80px 0;
 }
