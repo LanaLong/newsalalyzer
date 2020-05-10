@@ -8,3 +8,7 @@
     text-transform: uppercase;
     margin: 0;
 }
+
+.result__source:hover {
+     color:  rgba(25, 27, 34, .6);
+}

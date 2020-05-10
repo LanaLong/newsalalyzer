@@ -3,9 +3,5 @@
 }
 
 .nav__link:hover {
-     color:  rgba(25, 27, 34, .6);;
+     color:  rgba(25, 27, 34, .6);
 }
-
-/* .pointer {
-    cursor: url(../images/pointer.svg),pointer;
-} */

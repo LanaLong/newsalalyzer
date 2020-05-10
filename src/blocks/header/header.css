@@ -1,5 +1,3 @@
-@import url(_type/header_type_index.css);
-@import url(_type/header_type_inner.css);
 @import url(__container/header__container.css);
 
 .header {

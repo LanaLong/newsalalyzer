@@ -1,7 +1,7 @@
 .result__items {
-     max-width: 1232px;
      display: flex;
+     flex-wrap: no-wrap;
      justify-content: space-between;
-     margin: auto;
      padding-bottom: 64px;
 }
+
