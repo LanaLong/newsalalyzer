@@ -1,11 +1,8 @@
 .slider__pagination {
   position: relative;
-  margin-top: 20px;
+  padding-top:48px;
 }
 
-.slider__pagination {
-  background-color:  rgba(26, 27, 34, 1);
-}
 
 .swiper-pagination-bullet-active {
   background-color:  rgba(26, 27, 34, 1);
