@@ -3,6 +3,5 @@
 @import url(__container/header__container.css);
 
 .header {
-   width: 100%;
-   border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+    box-shadow: inset 0 -1px 0 rgba(196, 196, 196, .5);
 }

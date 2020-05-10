@@ -2,9 +2,10 @@
 @import url(_type/logo_type_inner.css);
 
 .logo {
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Times New Roman, Times, serif;;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    transition: color .5s ease;
 }

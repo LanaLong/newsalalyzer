@@ -14,20 +14,19 @@
     <title>NewsAnalyzer | О проекте</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
     <link rel="shortcut icon" href="<%=require('./images/favicon_io/favicon.ico').default%>" type="image/ico">
-    <!-- <link rel="stylesheet" href="../src/vendor/swiper/swiper.min.css"> -->
 </head>
 
 <body class="page">
     <header class="header header_type_inner">
         <div class="header__container">
-            <a href="index.html" class="logo logo_type_inner link">NewsAnalyzer</a>
-            <nav class="nav nav_type_index">
+            <a href="index.html" class="logo link logo_type_inner">NewsAnalyzer</a>
+            <nav class="nav nav_type_inner">
                 <ul class="nav__items">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link nav__link_type_active link">Главная</a>
+                        <a href="index.html" class="nav__link link">Главная</a>
                     </li>
                     <li class="nav__item">
-                        <a href="about.html" class="nav__link link">О проекте</a>
+                        <a href="about.html" class="link nav__link nav__link_type_active">О проекте</a>
                     </li>
                 </ul>
             </nav>
@@ -249,7 +248,6 @@
         </div>
     </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
-    <!-- <script src="../src/vendor/swiper/swiper.min.js"></script> -->
 
 </body>
 
