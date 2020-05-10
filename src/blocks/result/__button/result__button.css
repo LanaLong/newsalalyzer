@@ -10,3 +10,10 @@
     line-height: 24px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 768px) {
+    .result__button  {
+         padding: 16px 61px;
+    }
+}

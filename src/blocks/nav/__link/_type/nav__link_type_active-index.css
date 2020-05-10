@@ -8,3 +8,15 @@
 .nav__link_type_active-index:hover {
     color: rgba(255, 255, 255, .6);
 }
+
+@media screen and (max-width: 768px) {
+    .nav__link_type_active-index {
+        padding-bottom: 17px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav__link_type_active-index {
+        padding-bottom: 14px;
+    }
+}

@@ -5,3 +5,10 @@
     padding-bottom: 64px;
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .search__subtitle {
+        max-width: 452px;
+        padding-bottom: 24px;
+    }
+}

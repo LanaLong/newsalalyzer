@@ -4,3 +4,9 @@
     align-items: center;
     padding-bottom: 64px;
 }
+
+@media screen and (max-width: 768px) {
+    .result__header {
+        padding-bottom: 32px;
+    }
+}

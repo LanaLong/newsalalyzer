@@ -44,7 +44,7 @@
                 <form action="" name="search" class="text search__form">
                     <input type="text" class="search__input" placeholder="Введите тему новости" minlength="3"
                         maxlength="20" required name="keyword">
-                    <button class="search__button">Искать</button>
+                    <button type="submit" class="search__button" disabled>Искать</button>
                 </form>
             </div>
         </section>
@@ -79,7 +79,7 @@
                     <img src="<%= require('./images/card/image_08.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="text_type_date result__date">2 августа, 2019</p>
+                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
                         <h2 class="title result__card-title">Национальное достояние – парки</h2>
                         <h3 class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет
                             назад здесь начала складываться система национальных парков –
@@ -92,26 +92,28 @@
                     <img src="<%= require('./images/card/image_04.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="result__date text_type_date">2 августа, 2019</p>
-                        <h2 class="result__card-title title">Лесные огоньки: история одной фотографии</h2>
+                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
+                        <h2 class="title result__card-title">Лесные огоньки: история одной фотографии</h2>
                         <h3 class="result__text text">Фотограф отвлеклась от освещения суровой политической
                             реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                             из местных чудес природы.</h3>
                     </div>
-                    <p class="text_type_label result__source">Медуза</p>
+                    <a href="#" class="text_type_label link result__source">
+                        Медуза</a>
                 </div>
                 <div class="result__item">
                     <img src="<%= require('./images/card/image_07.jpg').default %>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
-                        <p class="result__date text_type_date">2 августа, 2019</p>
-                        <h2 class="result__card-title title">«Первозданная тайга»: новый фотопроект Игоря
+                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
+                        <h2 class="title result__card-title">«Первозданная тайга»: новый фотопроект Игоря
                             Шпиленка</h2>
                         <h3 class="result__text text">Знаменитый фотограф снимает первозданные леса России,
                             чтобы рассказать о необходимости их сохранения. В этот раз он
                             отправился в Двинско-Пинежскую тайгу, где...</h3>
                     </div>
-                    <p class="result__source text_type_label">Риа</p>
+                    <a href="#" class="text_type_label link result__source">
+                        Риа</a>
                 </div>
             </div>
             <button class="text result__button">Показать еще</button>

@@ -12,3 +12,9 @@
     height: 576px;
     color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .search {
+        height: 400px;
+    }
+}

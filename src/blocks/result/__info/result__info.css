@@ -1,4 +1,9 @@
 .result__info {
-    /* position: relative; */
     padding: 20px 24px 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .result__info {
+        padding: 16px;
+    }
 }

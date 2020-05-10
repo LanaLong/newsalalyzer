@@ -4,3 +4,18 @@
     margin: 0 0 32px;
     max-width: 608px;
 }
+
+@media screen and (max-width: 768px) {
+    .search__title {
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 385px;
+        margin: 0 0 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search__title {
+       
+    }
+}
