@@ -1,12 +1,13 @@
 @import url(./_type/nav_type_index.css);
 @import url(./_type/nav_type_inner.css);
 @import url(./__link/nav__link.css);
-@import url(./__link/_type/nav__link_type_active.css);
+@import url(./__link/_type/nav__link_type_active-inner.css);
+@import url(./__link/_type/nav__link_type_active-index.css);
 @import url(./__items/nav__items.css);
 @import url(./__item/nav__item.css);
 
 .nav {
-    font-family: Roboto;
+    font-family: Roboto, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
