@@ -9,6 +9,14 @@
     justify-content: space-between;
 }
 
+.search__form:focus {
+    border: 1px solid rgba(255, 255, 255, .5)
+}
+
+.search__form:focus-within {
+    border: 2px solid rgba(255, 255, 255, .5)
+}
+
 @media screen and (max-width: 768px) {
     .search__form {
         max-width: 452px;
