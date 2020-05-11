@@ -11,10 +11,30 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 686px) {
     .footer__copy {
         position: absolute;
+        left: 40px;
+        bottom: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer__copy {
+        font-size: 14px;
         left: 16px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .footer__copy {
+        bottom: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__copy {
+        /* left: 16px; */
         bottom: 22px;
     }
 }

@@ -2,9 +2,8 @@
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 686px) {
     .footer__icons {
         display: flex;
-        /* flex-direction: column; */
     }
 }
