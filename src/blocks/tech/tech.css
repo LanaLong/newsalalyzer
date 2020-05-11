@@ -3,9 +3,16 @@
 @import url(__items/tech__items.css);
 @import url(__name/tech__name.css);
 @import url(__title/tech__title.css);
-@import url(__content/tech__content.css);
+@import url(__container/tech__container.css);
 
 .tech {
     background-color: #f5f6f7;
-    padding: 80px;
+    padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .tech {
+        padding: 40px 0;
+        
+    }
 }

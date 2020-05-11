@@ -4,3 +4,9 @@
     align-items: center;
     padding-left: 40px;
 }
+
+@media screen and (max-width: 768px) {
+    .tech__item {
+        padding-left: 0;
+    }
+}

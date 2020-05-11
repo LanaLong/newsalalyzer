@@ -1,4 +1,11 @@
 .tech__items {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .tech__items {
+        
+        
+    }
 }
