@@ -10,3 +10,9 @@
         
     }
 }
+
+@media screen and (max-width: 576px) {
+    .footer__items {
+        flex-direction: column;
+    }
+}

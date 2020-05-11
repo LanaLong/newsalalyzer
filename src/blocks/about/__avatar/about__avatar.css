@@ -8,3 +8,9 @@
         max-width: 232px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .about__avatar {
+        max-width: 272px;
+    }
+}

@@ -5,7 +5,16 @@
 }
 
 @media screen and (max-width: 768px) {
-    .footer__items {
+    .footer__item {
         
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer__item {
+        /* line-height: 48px; */
+        padding-left: 0;
+        padding-bottom: 32px;
+        margin-left: -40px;
     }
 }

@@ -6,17 +6,24 @@
 @import url(__items/footer__items.css);
 @import url(__link/footer__link.css);
 @import url(__nav/footer__nav.css);
+@import url(__icons/footer__icons.css);
 
 .footer {
     height: 80px;
-    /* display: flex;
-    align-items: center; */
     padding-top: 50px;
+    position: relative;
 }
 
 @media screen and (max-width: 768px) {
     .footer {
         height: 64px;
         padding-top: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        min-height: 224px;
+        /* padding-top: 32px; */
     }
 }

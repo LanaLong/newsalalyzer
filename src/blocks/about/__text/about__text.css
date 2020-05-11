@@ -13,3 +13,9 @@
         margin: 0 0 8px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .about__text:last-of-type {
+        margin: 0;
+    }
+}

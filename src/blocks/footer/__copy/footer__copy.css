@@ -10,3 +10,11 @@
         
     }
 }
+
+@media screen and (max-width: 768px) {
+    .footer__copy {
+        position: absolute;
+        left: 16px;
+        bottom: 22px;
+    }
+}
