@@ -41,7 +41,7 @@
                 <p class="text search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной
                     она&nbsp;была в
                     новостях за прошедшую неделю.</p>
-                <form action="" name="search" class="text search__form">
+                <form name="search" class="text search__form">
                     <input type="text" class="search__input" placeholder="Введите тему новости" minlength="3"
                         maxlength="20" required name="keyword">
                     <button type="submit" class="search__button" disabled>Искать</button>
@@ -50,95 +50,100 @@
         </section>
     </section>
 
-    <section class="loader">
-        <div class="container loader__container">
-            <i class="loader__icon"></i>
-            <p class="loader__text text_type_minor">Идет поиск новостей...</p>
-        </div>
-    </section>
-
-    <section class="no-results">
-        <div class="container no-results__container">
-            <img src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено" class="no-results__img">
-            <h3 class="title no-results__title">Ничего не найдено</h3>
-            <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.</p>
-        </div>
-    </section>
-
-    <section class="result">
-        <div class="container result__container">
-            <div class="result__header">
-                <h2 class="title result__header-title">Результаты поиска</h2>
-                <div class="result__link-container">
-                    <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
-                    <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="result__icon">
-                </div>
+    <main>
+        <section class="loader">
+            <div class="container loader__container">
+                <i class="loader__icon"></i>
+                <p class="loader__text text_type_minor">Идет поиск новостей...</p>
             </div>
-            <div class="result__items">
-                <div class="result__item">
-                    <img src="<%= require('./images/card/image_08.jpg').default%>" alt="Card image"
-                        class="result__image">
-                    <div class="result__info">
-                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
-                        <h2 class="title result__card-title">Национальное достояние – парки</h2>
-                        <h3 class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет
-                            назад здесь начала складываться система национальных парков –
-                            охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h3>
-                    </div>
-                    <a href="#" class="text_type_label link result__source">
-                        Лента.ру</a>
-                </div>
-                <div class="result__item">
-                    <img src="<%= require('./images/card/image_04.jpg').default%>" alt="Card image"
-                        class="result__image">
-                    <div class="result__info">
-                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
-                        <h2 class="title result__card-title">Лесные огоньки: история одной фотографии</h2>
-                        <h3 class="result__text text">Фотограф отвлеклась от освещения суровой политической
-                            реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                            из местных чудес природы.</h3>
-                    </div>
-                    <a href="#" class="text_type_label link result__source">
-                        Медуза</a>
-                </div>
-                <div class="result__item">
-                    <img src="<%= require('./images/card/image_07.jpg').default%>" alt="Card image"
-                        class="result__image">
-                    <div class="result__info">
-                        <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
-                        <h2 class="title result__card-title">«Первозданная тайга»: новый фотопроект Игоря
-                            Шпиленка</h2>
-                        <h3 class="result__text text">Знаменитый фотограф снимает первозданные леса России,
-                            чтобы рассказать о необходимости их сохранения. В этот раз он
-                            отправился в Двинско-Пинежскую тайгу, где...</h3>
-                    </div>
-                    <a href="#" class="text_type_label link result__source">
-                        Риа</a>
-                </div>
+        </section>
+
+        <section class="no-results">
+            <div class="container no-results__container">
+                <img src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Ничего не найдено</h3>
+                <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.
+                </p>
             </div>
-            <button class="text result__button">Показать еще</button>
-        </div>
-    </section>
+        </section>
 
-    <section class="about">
-        <div class="container about__container">
-            <picture class="about__avatar">
-                <source srcset="<%=require('./images/avatar-mobile.png').default%>" media="(max-width: 475px)">
-                <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
-            </picture>
+        <section class="result">
+            <div class="container result__container">
+                <div class="result__header">
+                    <h2 class="title result__header-title">Результаты поиска</h2>
+                    <div class="result__link-container">
+                        <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
+                        <img src="<%=require('./images/icon/back.svg').default%>" alt="Back arrow" class="result__icon">
+                    </div>
+                </div>
+                <div class="result__items">
+                    <div class="result__item">
+                        <img src="<%= require('./images/card/image_08.jpg').default%>" alt="Card image"
+                            class="result__image">
+                        <div class="result__info">
+                            <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
+                            <h3 class="title result__card-title">Национальное достояние – парки</h3>
+                            <p class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет
+                                назад здесь начала складываться система национальных парков –
+                                охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                        </div>
+                        <a href="#" class="text_type_label link result__source">
+                            Лента.ру</a>
+                    </div>
+                    <div class="result__item">
+                        <img src="<%= require('./images/card/image_04.jpg').default%>" alt="Card image"
+                            class="result__image">
+                        <div class="result__info">
+                            <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
+                            <h3 class="title result__card-title">Лесные огоньки: история одной фотографии</h3>
+                            <p class="text result__text">Фотограф отвлеклась от освещения суровой политической
+                                реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                                из местных чудес природы.</p>
+                        </div>
+                        <a href="#" class="text_type_label link result__source">
+                            Медуза</a>
+                    </div>
+                    <div class="result__item">
+                        <img src="<%= require('./images/card/image_07.jpg').default%>" alt="Card image"
+                            class="result__image">
+                        <div class="result__info">
+                            <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
+                            <h3 class="title result__card-title">«Первозданная тайга»: новый фотопроект Игоря
+                                Шпиленка</h3>
+                            <p class="text result__text">Знаменитый фотограф снимает первозданные леса России,
+                                чтобы рассказать о необходимости их сохранения. В этот раз он
+                                отправился в Двинско-Пинежскую тайгу, где...</p>
+                        </div>
+                        <a href="#" class="text_type_label link result__source">
+                            Риа</a>
+                    </div>
+                </div>
+                <button class="text result__button">Показать еще</button>
+            </div>
+        </section>
 
-            <article class="about__content">
-                <h2 class="title about__title">Об авторе</h2>
-                <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
-                    зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы научились,
-                    и чем
-                    можете помочь потенциальным заказчикам.</p>
-            </article>
-        </div>
-    </section>
+        <section class="about">
+            <div class="container about__container">
+                <picture class="about__avatar">
+                    <source srcset="<%=require('./images/avatar-mobile.png').default%>" media="(max-width: 475px)">
+                    <img src="<%=require('./images/avatar-big.png').default%>" alt="Аватар автора"
+                        class="about__avatar">
+                </picture>
 
+                <article class="about__content">
+                    <h2 class="title about__title">Об авторе</h2>
+                    <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+                        зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                    <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы
+                        научились,
+                        и чем
+                        можете помочь потенциальным заказчикам.</p>
+                </article>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
         <div class="container footer__container">
             <div class="text footer__content">
