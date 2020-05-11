@@ -20,3 +20,9 @@
         padding: 16px 50px;        
     }
 }
+
+@media screen and (max-width: 768px) {
+    .search__button {
+        margin-top: 38px;     
+    }
+}

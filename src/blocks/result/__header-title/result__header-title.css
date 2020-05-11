@@ -11,3 +11,9 @@
         line-height: 34px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .result__header-title {
+        padding-bottom: 16px;
+    }
+}

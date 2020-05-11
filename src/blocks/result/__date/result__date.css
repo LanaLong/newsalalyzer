@@ -1,6 +1,6 @@
 .result__date {
     margin: 0;
     padding: 0;
-    /* margin-block-start: 0;
-    margin-block-end: 0; */
+    font-size: 18px;
+    line-height: 24px;
 }

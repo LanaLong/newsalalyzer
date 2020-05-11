@@ -9,12 +9,18 @@
 .search {
     background: url(../../images/header_bg.png) no-repeat 50%;
     background-size: cover;
-    height: 576px;
+    min-height: 576px;
     color: #fff;
 }
 
 @media screen and (max-width: 768px) {
     .search {
         height: 400px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search {
+        height: 536px;
     }
 }

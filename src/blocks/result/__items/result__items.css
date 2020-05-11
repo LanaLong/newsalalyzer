@@ -10,3 +10,10 @@
         padding-bottom: 24px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .result__items {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+}

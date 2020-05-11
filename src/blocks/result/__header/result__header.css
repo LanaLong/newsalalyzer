@@ -10,3 +10,12 @@
         padding-bottom: 32px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .result__header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 36px;
+    }
+}
