@@ -5,10 +5,14 @@
 @import url(__container/about__container.css);
 
 .about {
-    max-width: 1232px;
     padding: 80px 0;
     background-color: #fff;
-    display: flex;
     margin: auto;
 
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 40px 0;
+    }
 }
