@@ -12,3 +12,9 @@
         max-width: 336px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .gitlog__title {
+        line-height: 40px;
+    }
+}

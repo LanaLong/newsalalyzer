@@ -27,3 +27,10 @@
         padding: 40px 0;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .scheme {
+        margin-top: 24px;
+        padding: 24px 0;
+    }
+}

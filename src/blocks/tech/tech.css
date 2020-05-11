@@ -16,3 +16,10 @@
         
     }
 }
+
+@media screen and (max-width: 576px) {
+    .tech {
+        padding: 32px 0 5px;
+        
+    }
+}

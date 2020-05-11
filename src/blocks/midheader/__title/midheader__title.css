@@ -13,3 +13,10 @@
         line-height: 34px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .midheader__title {
+        font-size: 30px;
+        padding-bottom: 16px;
+    }
+}

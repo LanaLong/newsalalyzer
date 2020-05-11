@@ -5,3 +5,10 @@
     margin: 0;
     padding-bottom: 48px;
 }   
+
+@media screen and (max-width: 576px) {
+    .scheme__title {
+        font-size: 22px;
+        padding-bottom: 30px;
+    }
+}

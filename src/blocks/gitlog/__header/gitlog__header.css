@@ -10,3 +10,9 @@
         padding-bottom: 32px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .gitlog__header {
+        padding-bottom: 16px;
+    }
+}

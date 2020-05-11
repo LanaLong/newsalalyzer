@@ -5,7 +5,11 @@
 
 @media screen and (max-width: 768px) {
     .tech__items {
-        
-        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tech__items {
+        flex-wrap: wrap;
     }
 }

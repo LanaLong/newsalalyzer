@@ -4,3 +4,9 @@
     padding-right: 50px;
     width: 60px;
 }
+
+@media screen and (max-width: 576px) {
+    .scheme__data-item {
+        width: 85px;
+    }
+}

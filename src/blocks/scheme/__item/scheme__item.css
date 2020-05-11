@@ -9,3 +9,9 @@
 .scheme__item:last-of-type {
     padding-bottom: 0;
 }
+
+@media screen and (max-width: 576px) {
+    .scheme__item {
+        padding-bottom: 24px;
+    }
+}

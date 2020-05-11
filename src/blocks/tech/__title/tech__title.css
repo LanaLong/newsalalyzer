@@ -14,3 +14,12 @@
         
     }
 }
+
+@media screen and (max-width: 768px) {
+    .tech__title {
+        line-height: 40px;
+        
+    }
+}
+
+
