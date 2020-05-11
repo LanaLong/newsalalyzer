@@ -3,6 +3,7 @@
 @import url(./__link/nav__link.css);
 @import url(./__link/_type/nav__link_type_active-inner.css);
 @import url(./__link/_type/nav__link_type_active-index.css);
+@import url(./__link/_type/nav__link_type_inner.css);
 @import url(./__items/nav__items.css);
 @import url(./__item/nav__item.css);
 

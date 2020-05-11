@@ -6,6 +6,12 @@
     margin: auto;
 }
 
+@media screen and (max-width: 1024px) {
+    .midheader {
+        padding-top: 68px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .midheader {
         padding-top: 64px;

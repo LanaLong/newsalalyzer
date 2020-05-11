@@ -5,6 +5,12 @@
      padding-bottom: 64px;
 }
 
+@media screen and (max-width: 1024px) {
+    .result__items {
+        padding-bottom: 32px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .result__items {
         padding-bottom: 24px;

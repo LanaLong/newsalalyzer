@@ -4,14 +4,21 @@
     line-height: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .result__card-title {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 28px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow-y: hidden;;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .result__card-title {
+        font-size: 20px;
+        line-height: 24px;
     }
 }
 

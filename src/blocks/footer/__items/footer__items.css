@@ -11,8 +11,14 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 385px) {
     .footer__items {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__items {
+        /* flex-direction: column; */
     }
 }

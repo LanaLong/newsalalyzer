@@ -11,6 +11,12 @@
     position: relative;
 }
 
+@media screen and (max-width: 1024px) {
+    .gitlog {
+        padding: 60px 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .gitlog {
         padding: 40px 0;

@@ -1,7 +1,7 @@
 .result__button {
     border-radius: 50px;
     border: 0;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     margin: auto;
     padding: 20px 84px;
@@ -9,6 +9,10 @@
     font-size: 18px;
     line-height: 24px;
     cursor: pointer;
+}
+
+.result__button:hover {
+    background-color: rgba(255, 255, 255, .9);
 }
 
 @media screen and (max-width: 768px) {

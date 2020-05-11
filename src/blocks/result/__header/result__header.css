@@ -5,6 +5,12 @@
     padding-bottom: 64px;
 }
 
+@media screen and (max-width: 1024px) {
+    .result__header {
+        padding-bottom: 48px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .result__header {
         padding-bottom: 32px;
