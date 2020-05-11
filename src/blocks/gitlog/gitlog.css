@@ -3,8 +3,15 @@
 @import url(__title/gitlog__title.css);
 @import url(__icon/gitlog__icon.css);
 @import url(__link-text/gitlog__link-text.css);
+@import url(__container/gitlog__container.css);
 
 .gitlog {
     background: #F5F6F7;
     padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .gitlog {
+        padding: 40px 0 32px;
+    }
 }

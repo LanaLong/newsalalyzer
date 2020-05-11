@@ -9,10 +9,14 @@
 
 .footer {
     height: 80px;
+    /* display: flex;
+    align-items: center; */
+    padding-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
     .footer {
         height: 64px;
+        padding-top: 32px;
     }
 }

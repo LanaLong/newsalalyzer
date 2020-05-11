@@ -4,3 +4,16 @@
     line-height: 22px;
     color: #1A1B22;
 }
+
+@media screen and (max-width:768px) {
+    .slider__text {
+        min-width: 296px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+  .slider__text {
+  }
+
+}

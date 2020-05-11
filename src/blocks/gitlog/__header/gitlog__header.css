@@ -1,8 +1,12 @@
 .gitlog__header {
-    padding: 0 0 64px;
-    max-width: 1232px;
-    margin: auto;
+    padding-bottom: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .gitlog__header {
+        padding-bottom: 32px;
+    }
 }

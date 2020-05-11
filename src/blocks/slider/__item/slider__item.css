@@ -13,3 +13,18 @@
     cursor: pointer;
     box-shadow: 2px 7px 28px rgba(8,29,45,.1);
 }
+
+
+@media screen and (max-width:768px) {
+    .slider__item {
+        min-height: 242px;
+        min-width: 336px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+  .slider__item {
+  }
+
+}

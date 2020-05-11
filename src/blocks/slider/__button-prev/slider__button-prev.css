@@ -29,7 +29,8 @@
 @media screen and (max-width:768px) {
 
   .slider__button-prev {
-    top: calc(50% - 10px);
+    /* top: calc(50% - 10px); */
+    display: none;
   }
 
 }

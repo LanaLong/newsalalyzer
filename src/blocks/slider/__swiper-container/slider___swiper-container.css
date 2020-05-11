@@ -25,3 +25,8 @@
     z-index: 10;
 }
 
+@media screen and (max-width: 768px) {
+    .slider__swiper-container:before, .slider__swiper-container:after {
+        display: none;
+    }
+}

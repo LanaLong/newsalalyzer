@@ -3,6 +3,11 @@
 
 .midheader {
     padding-top: 80px;
-    max-width: 1232px;
     margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+        .midheader {
+        padding-top: 64px;
+    }
 }
