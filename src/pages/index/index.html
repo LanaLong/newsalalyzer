@@ -13,7 +13,7 @@
 
     <title>NewsAnalyzer | Главная</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
-    <link rel="shortcut icon" href="<%=require('../../../../images/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="<%=require('../../../../images/favicon.ico').default%>" type="image/ico">
 </head>
 
 <body class="page">
@@ -60,26 +60,27 @@
 
         <section class="no-results">
             <div class="container no-results__container">
-                <img src="<%=require('../images/not-found.svg').default%>" alt="Ничего не найдено"
-        class="no-results__img">
-    <h3 class="title no-results__title">Ничего не найдено</h3>
-    <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.
-    </p>
-    </div>
-    </section>
+                <img src="<%=require('../../../../images/not-found.svg" alt="Ничего не найдено"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Ничего не найдено</h3>
+                <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.
+                </p>
+            </div>
+        </section>
 
-    <section class="result">
-        <div class="container result__container">
-            <div class="result__header">
-                <h2 class="title result__header-title">Результаты поиска</h2>
-                <div class="result__link-container">
-                    <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
-                    <img src="<%=require('../images/icon/back.svg').default%>" alt="Back arrow" class="result__icon">
-                </div>
+        <section class="result">
+            <div class="container result__container">
+                <div class="result__header">
+                    <h2 class="title result__header-title">Результаты поиска</h2>
+                    <div class="result__link-container">
+                        <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
+                        <img src="<%=require('../../images/icon/back.svg').default%>" alt="Back arrow"
+                    class="result__icon">
+            </div>
             </div>
             <div class="result__items">
                 <div class="result__item">
-                    <img src="<%= require('../images/card/image_08.jpg').default%>" alt="Card image"
+                    <img src="<%= require('../../images/card/image_08.jpg').default%>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
                         <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
@@ -92,7 +93,7 @@
                         Лента.ру</a>
                 </div>
                 <div class="result__item">
-                    <img src="<%= require('../images/card/image_04.jpg').default%>" alt="Card image"
+                    <img src="<%= require('../../images/card/image_04.jpg').default%>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
                         <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
@@ -105,7 +106,7 @@
                         Медуза</a>
                 </div>
                 <div class="result__item">
-                    <img src="<%= require('../images/card/image_07.jpg').default%>" alt="Card image"
+                    <img src="<%= require('../../images/card/image_07.jpg').default%>" alt="Card image"
                         class="result__image">
                     <div class="result__info">
                         <time class="text_type_date result__date" datetime="2019-08-02">2 августа, 2019</time>
@@ -120,27 +121,28 @@
                 </div>
             </div>
             <button class="text result__button">Показать еще</button>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="about">
-        <div class="container about__container">
-            <picture class="about__avatar">
-                <source srcset="<%=require('../images/avatar-mobile.png').default%>" media="(max-width: 475px)">
-                <img src="<%=require('../images/avatar-big.png').default%>" alt="Аватар автора" class="about__avatar">
-            </picture>
+        <section class="about">
+            <div class="container about__container">
+                <picture class="about__avatar">
+                    <source srcset="<%=require('../../images/avatar-mobile.png').default%>" media="(max-width: 475px)">
+                    <img src="<%=require('../../images/avatar-big.png').default%>" alt="Аватар автора"
+                        class="about__avatar">
+                </picture>
 
-            <article class="about__content">
-                <h2 class="title about__title">Об авторе</h2>
-                <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
-                    зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы
-                    научились,
-                    и чем
-                    можете помочь потенциальным заказчикам.</p>
-            </article>
-        </div>
-    </section>
+                <article class="about__content">
+                    <h2 class="title about__title">Об авторе</h2>
+                    <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+                        зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                    <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы
+                        научились,
+                        и чем
+                        можете помочь потенциальным заказчикам.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -163,16 +165,16 @@
                 </nav>
                 <div class="footer__icons">
                     <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
-                        <img src="<%=require('../images/icon/gh.svg').default%>" class="footer__icon" alt="github">
+                        <img src="<%=require('../../images/icon/gh.svg').default%>" class="footer__icon" alt="github">
                     </a>
                     <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
-                        <img src="<%=require('../images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
+                        <img src="<%=require('../../images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
-    </body>
+</body>
 
 </html>

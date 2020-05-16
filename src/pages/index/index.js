@@ -1,7 +1,7 @@
 import './index.css';
-import { NewsApi } from '../../js/modules/NewsApi';
-import { QueryBuider } from '../../js/utils/QueryBuilder';
-import { NEWS_API_KEY } from '../constants/cards-constants';
+// import { NewsApi } from '../../js/modules/NewsApi';
+// import { QueryBuider } from '../../js/utils/QueryBuilder';
+// import { NEWS_API_KEY } from '../../js/constants/cards-constants';
 
 const searchForm = document.querySelector('#search__form');
 const searchInput = document.querySelector('#search__input');
