@@ -1,6 +1,6 @@
+import './about.css';
 import '../styles/vendor/swiper/swiper.min.css';
 import Swiper from 'swiper';
-import '../styles/about.css';
 
 
 const swiper = new Swiper('.swiper-container', {

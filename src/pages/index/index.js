@@ -1,11 +1,12 @@
-import '../styles/index.css';
-import { NewsApi } from ('./modules/NewsApi');
-import { QueryBuider } from './utils/QueryBuilder';
-import { NEWS_API_KEY } from ('../constants/cards-constants');
+import './index.css';
+import { NewsApi } from '../../js/modules/NewsApi';
+import { QueryBuider } from '../../js/utils/QueryBuilder';
+import { NEWS_API_KEY } from '../constants/cards-constants';
 
 const searchForm = document.querySelector('#search__form');
 const searchInput = document.querySelector('#search__input');
 const searchButton = document.querySelector('#search__button');
+
 const resultItems = document.querySelector('#result__items');
 const resultItem = document.querySelector('#result__item');
 const resultImage = document.querySelector('#result__image');
@@ -19,6 +20,22 @@ var newsQueryBuilder = new QueryBuider(NEWS_API_KEY);
 var newsApiClient = new NewsApi(newsQueryBuilder);
 
 
-setNewsCardsInfo() {
+// setNewsCardsInfo() {
+
+// };
+
+function viewNews() {
+    // - удалить старые карточки(отдельный метод)
+
+    // - похимичить с классами
+
+    // - показать прелоадер
+
+    // - задизейблить кнопку поиска
+    searchButton.setAttribute('disable', true);
+
+    // - вызвать getNews у newApiClient
+
+    // - базово прописать then и catch у getNews
 
 }

@@ -1,13 +1,11 @@
-import { NEWS_API_KEY } from ('../constants/cards-constants');
-import { QueryBuider } from ('../utils/QueryBuilder');
+import { NEWS_API_KEY } from '../constants/cards-constants';
+import { QueryBuider } from '../utils/QueryBuilder';
 
 class NewsApi {
-    #builder
+    _builder;
 
     constructor(builder) {
-
-
-        this.#builder = builder;
+        this._builder = builder;
     }
 
     getNews(from, to, query) {
