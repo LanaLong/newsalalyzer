@@ -1,0 +1,9 @@
+@import url(_type/text_type_date.css);
+@import url(_type/text_type_label.css);
+@import url(_type/text_type_minor.css);
+
+.text {
+    font-family: Roboto, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}

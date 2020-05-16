@@ -1,0 +1,7 @@
+.footer__link {
+    color: rgba(25, 27, 34, 1);
+}
+
+.footer__link:hover {
+    color: rgba(25, 27, 34, .6);
+}

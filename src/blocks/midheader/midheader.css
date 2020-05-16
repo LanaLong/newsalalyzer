@@ -1,0 +1,25 @@
+@import url(__info/midheader__info.css);
+@import url(__title/midheader__title.css);
+
+.midheader {
+    padding-top: 80px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .midheader {
+        padding-top: 68px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .midheader {
+        padding-top: 64px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .midheader {
+        padding-top: 16px;
+    }
+}

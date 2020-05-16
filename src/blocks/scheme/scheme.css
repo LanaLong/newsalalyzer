@@ -1,0 +1,42 @@
+@import url(__cell-title/scheme__cell-title.css);
+@import url(__chart/scheme__chart.css);
+@import url(__data-item/scheme__data-item.css);
+@import url(__header/scheme__header.css);
+@import url(__item/scheme__item.css);
+@import url(__items/scheme__items.css);
+@import url(__scale/scheme__scale.css);
+@import url(__scale-value/scheme__scale-value.css);
+@import url(__title/scheme__title.css);
+@import url(__barchart-item/scheme__barchart-item.css);
+@import url(__value-item/scheme__value-item.css);
+@import url(__container/scheme__container.css);
+@import url(__bar-container/scheme__bar-container.css);
+@import url(__value-bar/scheme__value-bar.css);
+
+
+.scheme {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1024px) {
+    .scheme {
+        margin-top: 60px;
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .scheme {
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .scheme {
+        margin-top: 24px;
+        padding: 24px 0;
+    }
+}

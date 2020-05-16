@@ -1,0 +1,27 @@
+.result__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 64px;
+}
+
+@media screen and (max-width: 1024px) {
+    .result__header {
+        padding-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .result__header {
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .result__header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 36px;
+    }
+}

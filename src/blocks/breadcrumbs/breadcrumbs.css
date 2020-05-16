@@ -1,0 +1,20 @@
+@import url(__items/breadcrumbs__items.css);
+@import url(__link/breadcrumbs__link.css);
+@import url(__link/_type/breadcrumbs__link_type_disabled.css);
+@import url(__container/breadscrumbs__container.css);
+
+.breadcrumbs {
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrumbs {
+        padding-top: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

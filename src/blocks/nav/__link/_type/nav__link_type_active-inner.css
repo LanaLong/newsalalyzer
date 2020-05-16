@@ -1,0 +1,23 @@
+.nav__link_type_active-inner {
+    font-weight: 500;
+    color: #1A1B22;
+    border-bottom: 4px solid  rgba(25, 27, 34, 1);;
+    padding-bottom: 25px;
+}
+
+.nav__link_type_active-inner:hover {
+    color: rgba(25, 27, 34, .6);
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav__link_type_active-inner {
+        padding-bottom: 17px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav__link_type_active-inner {
+        padding-bottom: 14px;
+    }
+}

@@ -1,0 +1,17 @@
+.slider__swiper-slide {
+    margin-right: 16px;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width:768px) {
+    .slider__swiper-slide{
+        margin-right: 8px;
+  }
+
+}
+
+@media screen and (max-width:576px) {
+  .slider__swiper-slide {
+  }
+
+}

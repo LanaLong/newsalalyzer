@@ -1,0 +1,10 @@
+@import url(__icon/loader__icon.css);
+@import url(__text/loader__text.css);
+@import url(__container/loader__container.css);
+
+.loader {
+    height: 282px;
+    background: #F5F6F7;
+    display: none;  
+    /* for level-1 */
+}

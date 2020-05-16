@@ -1,0 +1,8 @@
+.result__icon {
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+.result__icon:hover {
+     color:  rgba(25, 27, 34, .5);
+}

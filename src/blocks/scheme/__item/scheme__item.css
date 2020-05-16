@@ -1,0 +1,17 @@
+.scheme__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding-bottom: 56px;
+}
+
+.scheme__item:last-of-type {
+    padding-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .scheme__item {
+        padding-bottom: 24px;
+    }
+}

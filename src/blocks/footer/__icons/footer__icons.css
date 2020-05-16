@@ -1,0 +1,8 @@
+.footer__icons {
+}
+
+@media screen and (max-width: 686px) {
+    .footer__icons {
+        display: flex;
+    }
+}

@@ -1,0 +1,22 @@
+.footer__items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__items {
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .footer__items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__items {
+    }
+}

@@ -1,0 +1,10 @@
+.scheme__scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 104px;
+    color: #B6BCBF;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}

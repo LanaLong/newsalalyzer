@@ -1,0 +1,33 @@
+.search__form {
+    max-width: 608px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border-radius: 50px; 
+    height: 64px;  
+    display: flex;
+    justify-content: space-between;
+}
+
+.search__form:focus {
+    border: 1px solid rgba(255, 255, 255, .5)
+}
+
+.search__form:focus-within {
+    border: 2px solid rgba(255, 255, 255, .5)
+}
+
+@media screen and (max-width: 768px) {
+    .search__form {
+        max-width: 452px;
+        height: 56px;  
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search__form {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+    }
+}

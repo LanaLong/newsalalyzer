@@ -1,0 +1,7 @@
+.logo_type_inner {
+     color: rgba(26, 27, 34, 1);
+}
+
+.logo_type_inner:hover {
+     color: rgba(26, 27, 34, .6);
+}

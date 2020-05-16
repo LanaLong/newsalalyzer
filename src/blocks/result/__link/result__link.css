@@ -1,0 +1,10 @@
+.result__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color:  #1A1B22;
+}
+
+.result__link:hover {
+     color:  rgba(25, 27, 34, .6);;
+}

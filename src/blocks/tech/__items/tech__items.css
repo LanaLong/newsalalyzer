@@ -1,0 +1,13 @@
+.tech__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+    .tech__items {
+        flex-wrap: wrap;
+    }
+}

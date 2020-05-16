@@ -1,0 +1,13 @@
+@import url(__img/no-results__img.css);
+@import url(__subtitle/no-results__subtitle.css);
+@import url(__title/no-results__title.css);
+@import url(__container/no-results__container.css);
+
+.no-results {
+    height: 374px;
+    background: #F5F6F7;
+    display: flex;
+    align-items: center;
+    display: none; 
+    /*  for level-1 */
+}

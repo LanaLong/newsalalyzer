@@ -1,0 +1,41 @@
+@import url(__content/footer__content.css);
+@import url(__copy/footer__copy.css);
+@import url(__icon-link/footer__icon-link.css);
+@import url(__icon/footer__icon.css);
+@import url(__item/footer__item.css);
+@import url(__items/footer__items.css);
+@import url(__link/footer__link.css);
+@import url(__nav/footer__nav.css);
+@import url(__icons/footer__icons.css);
+
+.footer {
+    height: 80px;
+    padding-top: 50px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 70px;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 64px;
+        padding-top: 32px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .footer {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer {
+       
+    }
+}

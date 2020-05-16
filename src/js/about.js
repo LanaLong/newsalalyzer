@@ -1,0 +1,23 @@
+import '../vendor/swiper/swiper.min.css';
+import Swiper from 'swiper';
+import '../pages/about.css';
+// import '../vendor/swiper/swiper.min.js';
+
+
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 'auto',
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

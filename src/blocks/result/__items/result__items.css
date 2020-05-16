@@ -1,0 +1,26 @@
+.result__items {
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     padding-bottom: 64px;
+}
+
+@media screen and (max-width: 1024px) {
+    .result__items {
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .result__items {
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .result__items {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+}
