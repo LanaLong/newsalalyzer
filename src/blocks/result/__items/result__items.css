@@ -1,6 +1,6 @@
 .result__items {
      display: flex;
-     flex-wrap: no-wrap;
+     flex-wrap: nowrap;
      justify-content: space-between;
      padding-bottom: 64px;
 }
@@ -20,6 +20,7 @@
 @media screen and (max-width: 576px) {
     .result__items {
         flex-wrap: wrap;
+        justify-content: center;
         padding-bottom: 0;
     }
 }

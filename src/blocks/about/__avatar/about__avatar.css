@@ -1,23 +1,25 @@
 .about__avatar {
     border-radius: 50%;
-    max-width: 464px;
+    /* max-width: 464px; */
+    max-width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 1200px) {
     .about__avatar {
-        max-width: 400px;
+        /* max-width: 400px; */
     }
 }
 
 @media screen and (max-width: 900px) {
     .about__avatar {
-        max-width: 350px;
+        /* max-width: 350px; */
     }
 }
 
 @media screen and (max-width: 768px) {
     .about__avatar {
-        max-width: 232px;
+        /* max-width: 232px; */
     }
 }
 
