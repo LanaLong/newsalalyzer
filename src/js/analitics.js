@@ -1,1 +1,1 @@
-import '../pages/analitics.css';
+import '../styles/analitics.css';

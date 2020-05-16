@@ -63,17 +63,17 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/index.html',
+            template: './src/pages/index.html',
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/about.html',
+            template: './src/pages/about.html',
             filename: 'about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/analitics.html',
+            template: './src/pages/analitics.html',
             filename: 'analitics.html'
         }),
         new WebpackMd5Hash(),
