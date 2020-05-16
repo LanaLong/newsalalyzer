@@ -1,7 +1,7 @@
 Yandex Praktikum **2020**
 ====
 Diploma 
-[![](https://img.shields.io/badge/version-1.0.1-green)](https://img.shields.io/badge/version-1.0.1-green)
+[![](https://img.shields.io/badge/version-1.0.2-green)](https://img.shields.io/badge/version-1.0.2-green)
 ===
 
 Author / student Yandex Praktikum (09 flow): LanaLong
