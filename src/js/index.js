@@ -17,3 +17,8 @@ const resultButton = document.querySelector('#result__button');
 
 var newsQueryBuilder = new QueryBuider(NEWS_API_KEY);
 var newsApiClient = new NewsApi(newsQueryBuilder);
+
+
+setNewsCardsInfo() {
+
+}
