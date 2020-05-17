@@ -23,8 +23,10 @@ var newsApiClient = new NewsApi(newsQueryBuilder);
 // setNewsCardsInfo() {
 // };
 
-function viewNews() {
-    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', 'jsbad')
+function viewNews(event) {
+    event.preventDefault();
+    console.log(event);
+    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', event.target[0].value)
         .then(res => res.json())
         .then(res => {
             console.log('Received result');
@@ -43,7 +45,7 @@ function viewNews() {
     // - показать прелоадер
 
     // - задизейблить кнопку поиска
-    searchButton.setAttribute('disable', true);
+    //searchButton.setAttribute('disable', true);
 
     // - вызвать getNews у newApiClient
 
@@ -51,4 +53,5 @@ function viewNews() {
 
 }
 
-viewNews();
+
+searchForm.addEventListener('submit', viewNews)

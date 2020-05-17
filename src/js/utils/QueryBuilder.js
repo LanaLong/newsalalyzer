@@ -42,7 +42,7 @@ class QueryBuider {
         }
 
         //remove last '&'
-        resultUrl.slice(0, -1);
+        resultUrl = resultUrl.slice(0, -1);
 
         return resultUrl;
     }
