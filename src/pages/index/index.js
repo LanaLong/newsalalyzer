@@ -9,6 +9,7 @@ const searchButton = document.querySelector('.search__button');
 
 const resultItems = document.querySelector('.result__items');
 const resultItem = document.querySelector('.result__item');
+const resultInfoContainer = document.querySelector('.result__info');
 const resultImage = document.querySelector('.result__image');
 const resultDate = document.querySelector('.result__date');
 const resultCardTitle = document.querySelector('.result__card-title');
@@ -29,8 +30,16 @@ function viewNews(event) {
     let result = newsApiClient.getNews('2020-05-08', '2020-05-15', event.target[0].value)
         .then(res => res.json())
         .then(res => {
-            console.log('Received result');
-            console.log(res);
+            res.articles.forEach(function (article) {
+                console.log(article.title);
+
+                // в аrticle есть все информация по конкретной статье
+                // нужно создавать карточку, заполнять ее данными из article
+                // и добавлять в result_items
+                // let resultItems = document.querySelector('.result__items');
+                // let resultItem = document.querySelector('.result__item');
+                // ...
+            });
         });
 
 

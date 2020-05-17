@@ -28,21 +28,27 @@ class QueryBuider {
 
     build() {
         let resultUrl = this.url;
+        let parameterAdded = false;
 
         if (typeof (this.query) != 'undefined') {
-            resultUrl += `?q=${this.query}&`
+            resultUrl += `?q=${this.query}&`;
+            parameterAdded = true;
         }
 
         if (typeof (this.dateFrom) != 'undefined') {
-            resultUrl += `?from=${this.dateFrom}&`
+            resultUrl += `?from=${this.dateFrom}&`;
+            parameterAdded = true;
         }
 
         if (typeof (this.dateTo) != 'undefined') {
-            resultUrl += `?to=${this.dateTo}&`
+            resultUrl += `?to=${this.dateTo}&`;
+            parameterAdded = true;
         }
 
-        //remove last '&'
-        resultUrl = resultUrl.slice(0, -1);
+        if (parameterAdded) {
+            //remove last '&'
+            resultUrl = resultUrl.slice(0, -1);
+        }
 
         return resultUrl;
     }

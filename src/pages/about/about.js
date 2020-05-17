@@ -1,4 +1,7 @@
 import '../../vendor/swiper/swiper.min.css';
+import { QueryBuilder, QueryBuider } from '../../js/utils/QueryBuilder';
+import { GitHubApi } from '../../js/modules/GitHubApi';
+
 import './about.css';
 import Swiper from 'swiper';
 
@@ -30,4 +33,28 @@ const sliderData = document.querySelector('.slider__data');
 const sliderInfo = document.querySelector('.slider__info');
 const sliderText = document.querySelector('.slider__text');
 
+const githubQueryBuilder = new QueryBuider('https://api.github.com/repos/LanaLong/newsalalyzer/commits');
+const githubClient = new GitHubApi(githubQueryBuilder);
 
+function viewCommits() {
+    githubClient.getCommits()
+        .then(res => res.json())
+        .then(res => {
+            console.log('Received commits');
+            res.forEach(item => {
+                // посмотреть, что находится внутри коммита
+                // console.log(item);
+
+                // запись коммита в html элемент
+                //
+                // let sliderText = document.createElement('div');
+                // sliderText.classList.add('slider__text');
+                // sliderText.textContent = item.commit.message;
+                // потом этот элемент закинуть в slider_item и добавить в контейнер
+                // аналогично с другими элементами
+
+            });
+        });
+};
+
+viewCommits();
