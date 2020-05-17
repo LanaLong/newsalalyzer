@@ -19,7 +19,7 @@ export default class Preloader {
         containerPreload.appendChild(preloader);
         this._container.appendChild(containerPreload);
 
-        return preloader;
+        return containerPreload;
     }
 
     removePreloader() {
