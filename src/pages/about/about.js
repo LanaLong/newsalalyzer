@@ -52,7 +52,6 @@ function viewCommits() {
                 // sliderText.textContent = item.commit.message;
                 // потом этот элемент закинуть в slider_item и добавить в контейнер
                 // аналогично с другими элементами
-
             });
         });
 };
