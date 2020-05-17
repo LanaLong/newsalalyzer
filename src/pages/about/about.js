@@ -1,5 +1,5 @@
-import './about.css';
 import '../../vendor/swiper/swiper.min.css';
+import './about.css';
 import Swiper from 'swiper';
 
 
