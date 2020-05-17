@@ -5,24 +5,29 @@ class QueryBuider {
 
     setQuery(query) {
         this.query = query;
+        return this;
     }
 
     setDateFrom(dateFrom) {
         this.dateFrom = dateFrom;
+        return this;
     }
 
     setDateTo(dateTo) {
         this.dateTo = dateTo;
+        return this;
     }
     setPageSize(pageSize) {
         this.pageSize = pageSize;
+        return this;
     }
     setLanguage(language) {
         this.language = language;
+        return this;
     }
 
     build() {
-        return resultUrl = url;
+        let resultUrl = this.url;
 
         if (typeof (this.query) != 'undefined') {
             resultUrl += `?q=${this.query}&`
@@ -30,6 +35,10 @@ class QueryBuider {
 
         if (typeof (this.dateFrom) != 'undefined') {
             resultUrl += `?from=${this.dateFrom}&`
+        }
+
+        if (typeof (this.dateTo) != 'undefined') {
+            resultUrl += `?to=${this.dateTo}&`
         }
 
         //remove last '&'
