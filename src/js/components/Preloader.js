@@ -4,22 +4,30 @@ export default class Preloader {
     }
 
     viewPreloader() {
-        const containerPreload = document.createDocumentFragment();
-        const preloader = document.createElement('div');
-        const preloaderIcon = document.createElement('div');
-        const preloaderText = document.createElement('div');
+        return `
+         <section class="preloader">
+            <div class="container preloader__container">
+                <i class="preloader__icon"></i>
+                <p class="preloader__text text_type_minor">Идет поиск новостей...</p>
+            </div>
+        </section>
+        `
+        // const containerPreload = document.createDocumentFragment();
+        // const preloader = document.createElement('div');
+        // const preloaderIcon = document.createElement('div');
+        // const preloaderText = document.createElement('div');
 
-        preloader.classList.add('preloader');
-        preloaderIcon.classList.add('preloader__icon');
-        preloaderText.classList.add('preloader__text');
-        preloaderText.textContent = 'Идет поиск новостей...';
+        // preloader.classList.add('preloader');
+        // preloaderIcon.classList.add('preloader__icon');
+        // preloaderText.classList.add('preloader__text');
+        // preloaderText.textContent = 'Идет поиск новостей...';
 
-        preloader.appendChild(preloaderIcon);
-        preloader.appendChild(preloaderText);
-        containerPreload.appendChild(preloader);
-        this._container.appendChild(containerPreload);
+        // preloader.appendChild(preloaderIcon);
+        // preloader.appendChild(preloaderText);
+        // containerPreload.appendChild(preloader);
+        // this._container.appendChild(containerPreload);
 
-        return containerPreload;
+        // return containerPreload;
     }
 
     removePreloader() {

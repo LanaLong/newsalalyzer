@@ -3,15 +3,18 @@ import { NewsApi } from '../../js/modules/NewsApi';
 import { QueryBuider } from '../../js/utils/QueryBuilder';
 import { NEWS_API_KEY } from '../../js/constants/cards-constants';
 import { DataStorage } from '../../js/modules/DataStorage';
+import { NewsCardList } from '../../js/components/NewsCardList';
 
 const searchForm = document.querySelector('.search__form');
 const searchInput = document.querySelector('.search__input');
 const searchButton = document.querySelector('.search__button');
 
-var newsQueryBuilder = new QueryBuider('https://newsapi.org/v2/everything');
+const newsQueryBuilder = new QueryBuider('https://newsapi.org/v2/everything');
 
-var newsApiClient = new NewsApi(newsQueryBuilder);
-var dataStorage = new DataStorage();
+const newsApiClient = new NewsApi(newsQueryBuilder);
+const dataStorage = new DataStorage();
+
+const newsCardList = new NewsCardList();
 
 // setNewsCardsInfo() {
 // };
@@ -24,6 +27,10 @@ function viewNews(event) {
         .then(res => res.json())
         .then(res => {
             dataStorage.storeQueryResult(res, query);
+
+            let newsList = newsCardList.createCardList(res.articles);
+            console.log(newsList);
+
             res.articles.forEach(function (article) {
                 console.log(article.title);
 

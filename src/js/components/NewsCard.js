@@ -1,26 +1,40 @@
 // VERSION 3
-class NewCard {
-    constructor() {
-
+class NewsCard {
+    constructor(newsImgLink, newsDate, newsTitle, newsText, newsSource) {
+        this.newsImgLink = newsImgLink;
+        this.newsDate = newsDate;
+        this.newsTitle = newsTitle;
+        this.newsText = newsText;
+        this.newsSource = newsSource;
     }
 
     createMarkup(data) {
+        let date = new Date(this.newsDate);
+        let month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+        let dateDay = date.getDay() + 1;
+        let dateMonth = month[date.getMonth()];
+        let dateYear = date.getFullYear();
+
+        let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`
+
+
         return `
             <div class="result__item">
-                <img src="<%= require('${newsImgLink}')%>" alt="Card image"
+                <img src="${this.newsImgLink}" alt="Card image"
                     class="result__image">
                 <div class="result__info">
-                    <time class="text_type_date result__date" datetime="2019-08-02">${newsDate}</time>
-                    <h3 class="title result__card-title">${newsTitle}</h3>
-                    <p class="text result__text">${newsText}</p>
+                    <time class="text_type_date result__date" datetime="2019-08-02">${stringDate}</time>
+                    <h3 class="title result__card-title">${this.newsTitle}</h3>
+                    <p class="text result__text">${this.newsText}</p>
                 </div>
-                <a href="#" class="text_type_label link result__source">${newsSource}</a>
+                <a href="#" class="text_type_label link result__source">${this.newsSource}</a>
             </div>
         `
     }
 }
 
-
+export { NewsCard };
 
 // VERSION 1
 // const resultItems = document.querySelector('.result__items');
