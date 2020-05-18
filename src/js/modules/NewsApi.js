@@ -7,11 +7,12 @@ class NewsApi {
         this._builder = builder;
     }
 
-    getNews(from, to, query) {
+    getNews(from, to, query, pageSize) {
         var url = this._builder
             .setQuery(query)
             .setDateFrom(from)
             .setDateTo(to)
+            .setPageSize(pageSize)
             .build();
 
         console.log(url);

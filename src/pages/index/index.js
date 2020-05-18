@@ -23,7 +23,7 @@ function viewNews(event) {
     event.preventDefault();
     const query = event.target[0].value;
     console.log(event);
-    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query)
+    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 3)
         .then(res => res.json())
         .then(res => {
             dataStorage.storeQueryResult(res, query);

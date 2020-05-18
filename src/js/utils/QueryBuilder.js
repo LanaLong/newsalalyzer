@@ -27,30 +27,32 @@ class QueryBuider {
     }
 
     build() {
-        let resultUrl = this.url;
-        let parameterAdded = false;
+
+        let queryString = '';
 
         if (typeof (this.query) != 'undefined') {
-            resultUrl += `?q=${this.query}&`;
-            parameterAdded = true;
+            queryString += `q=${this.query}&`;
         }
 
         if (typeof (this.dateFrom) != 'undefined') {
-            resultUrl += `?from=${this.dateFrom}&`;
-            parameterAdded = true;
+            queryString += `from=${this.dateFrom}&`;
         }
 
         if (typeof (this.dateTo) != 'undefined') {
-            resultUrl += `?to=${this.dateTo}&`;
-            parameterAdded = true;
+            queryString += `to=${this.dateTo}&`;
         }
 
-        if (parameterAdded) {
+        if (typeof (this.pageSize) != 'undefined') {
+            queryString += `pageSize=${this.pageSize}&`;
+        }
+
+        if (queryString != '') {
             //remove last '&'
-            resultUrl = resultUrl.slice(0, -1);
+            queryString = queryString.slice(0, -1);
+            return `${this.url}?${queryString}`;
         }
 
-        return resultUrl;
+        return this.url;
     }
 
 }
