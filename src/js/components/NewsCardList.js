@@ -14,9 +14,6 @@ class NewsCardList {
         });
     }
 
-
-
-
 }
 
 export { NewsCardList };

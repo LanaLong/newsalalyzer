@@ -24,3 +24,5 @@ class CommitCardList {
 // const sliderData = document.querySelector('.slider__data');
 // const sliderInfo = document.querySelector('.slider__info');
 // const sliderText = document.querySelector('.slider__text');
+
+export { CommitCardList };

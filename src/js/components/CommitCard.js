@@ -5,7 +5,6 @@ class CommitCard {
         this.commitTitle = commitTitle;
         this.commitEmail = commitEmail;
         this.commitText = commitText;
-
     }
 
     createMarkup(data) {

@@ -1,6 +1,7 @@
 import '../../vendor/swiper/swiper.min.css';
 import { QueryBuilder, QueryBuider } from '../../js/utils/QueryBuilder';
 import { GitHubApi } from '../../js/modules/GitHubApi';
+import { CommitCardList } from '../../js/components/CommitCardList';
 
 import './about.css';
 import Swiper from 'swiper';
@@ -35,6 +36,8 @@ const sliderText = document.querySelector('.slider__text');
 
 const githubQueryBuilder = new QueryBuider('https://api.github.com/repos/LanaLong/newsalalyzer/commits');
 const githubClient = new GitHubApi(githubQueryBuilder);
+
+const commitCardList = new CommitCardList();
 
 function viewCommits() {
     githubClient.getCommits()
