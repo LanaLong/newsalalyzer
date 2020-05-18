@@ -20,7 +20,7 @@ class NewsCard {
 
 
         return `
-            <div class="result__item">
+            <div class="result__item result__item_hidden">
                 <img src="${this.newsImgLink}" alt="Card image"
                     class="result__image">
                 <div class="result__info">

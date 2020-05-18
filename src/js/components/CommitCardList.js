@@ -9,11 +9,21 @@ class CommitCardList {
         const sliderWrapper = document.querySelector('.slider__swiper-wrapper');
         // const sliderItem = document.querySelector('.slider__item');
 
+        let showedCards = 0;
+
         data.forEach(item => {
 
 
             console.log(item.author.avatar_url);
-            let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message);
+
+            if (showedCards < 3) {
+                showedCards++;
+                let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, true);
+            }
+            else {
+                let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, false);
+            }
+
 
             sliderWrapper.insertAdjacentHTML('afterbegin', commitCard.createMarkup());
         });

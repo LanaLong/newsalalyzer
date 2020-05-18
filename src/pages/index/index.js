@@ -9,12 +9,16 @@ const searchForm = document.querySelector('.search__form');
 const searchInput = document.querySelector('.search__input');
 const searchButton = document.querySelector('.search__button');
 
+const showMoreButton = document.querySelector('.result__button');
+
 const newsQueryBuilder = new QueryBuider('https://newsapi.org/v2/everything');
 
 const newsApiClient = new NewsApi(newsQueryBuilder);
 const dataStorage = new DataStorage();
 
 const newsCardList = new NewsCardList();
+
+let showedCardsCount = 3;
 
 // setNewsCardsInfo() {
 // };
@@ -23,7 +27,7 @@ function viewNews(event) {
     event.preventDefault();
     const query = event.target[0].value;
     console.log(event);
-    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 3)
+    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 12)
         .then(res => res.json())
         .then(res => {
             dataStorage.storeQueryResult(res, query);
@@ -31,10 +35,7 @@ function viewNews(event) {
             let newsList = newsCardList.createCardList(res.articles);
             console.log(newsList);
 
-            res.articles.forEach(function (article) {
-                console.log(article.title);
-
-            });
+            setCardsVisibility();
             // .then(result => {
             //     if (result.ok) {
             //         return result.json();
@@ -70,5 +71,30 @@ function viewNews(event) {
 
 }
 
+function setCardsVisibility() {
+    let cardsContainer = document.querySelector('.result__items');
+    let shownCardsCount = 0;
+    let resultVisibleCardsCount = 0;
 
-searchForm.addEventListener('submit', viewNews)
+    cardsContainer.children.forEach(item => {
+
+        if (!item.classList.contains('result__item_hidden')) {
+            resultVisibleCardsCount++;
+        }
+
+        if (shownCardsCount < 3 && item.classList.contains('result__item_hidden')) {
+            shownCardsCount++;
+            resultVisibleCardsCount++;
+            item.classList.remove('result__item_hidden');
+        }
+    });
+
+    if (cardsContainer.children.length == resultVisibleCardsCount) {
+        showMoreButton.setAttribute('disabled', true);
+    }
+
+}
+
+searchForm.addEventListener('submit', viewNews);
+showMoreButton.addEventListener('click', setCardsVisibility);
+
