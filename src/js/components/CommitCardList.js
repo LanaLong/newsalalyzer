@@ -9,8 +9,11 @@ class CommitCardList {
         const sliderWrapper = document.querySelector('.slider__swiper-wrapper');
         // const sliderItem = document.querySelector('.slider__item');
 
-        data.forEach(commit => {
-            let commitCard = new CommitCard(commit.author.date, commit.author.AVATAR_WHERE_IT, commit.author.name, commit.author.email, commit.message);
+        data.forEach(item => {
+
+
+            console.log(item.author.avatar_url);
+            let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message);
 
             sliderWrapper.insertAdjacentHTML('afterbegin', commitCard.createMarkup());
         });

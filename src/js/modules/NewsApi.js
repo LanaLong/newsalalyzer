@@ -8,7 +8,7 @@ class NewsApi {
     }
 
     getNews(from, to, query, pageSize) {
-        var url = this._builder
+        const url = this._builder
             .setQuery(query)
             .setDateFrom(from)
             .setDateTo(to)
@@ -23,6 +23,10 @@ class NewsApi {
             }
         });
     }
+
+
+    // return Promise.reject(`Ошибка: ${result.status}`);  
+
 
 }
 

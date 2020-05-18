@@ -34,13 +34,20 @@ function viewNews(event) {
             res.articles.forEach(function (article) {
                 console.log(article.title);
 
-                // в аrticle есть все информация по конкретной статье
-                // нужно создавать карточку, заполнять ее данными из article
-                // и добавлять в result_items
-                // let resultItems = document.querySelector('.result__items');
-                // let resultItem = document.querySelector('.result__item');
-                // ...
             });
+            // .then(result => {
+            //     if (result.ok) {
+            //         return result.json();
+            //     }
+            //     return Promise.reject(`Ошибка: ${result.status}`);
+            // });
+
+            // в аrticle есть все информация по конкретной статье
+            // нужно создавать карточку, заполнять ее данными из article
+            // и добавлять в result_items
+            // let resultItems = document.querySelector('.result__items');
+            // let resultItem = document.querySelector('.result__item');
+            // ...
         });
 
 

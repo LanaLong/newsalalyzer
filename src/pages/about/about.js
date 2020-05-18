@@ -43,6 +43,7 @@ function viewCommits() {
     githubClient.getCommits()
         .then(res => res.json())
         .then(res => {
+            commitCardList.createCommitCardList(res);
             console.log('Received commits');
             res.forEach(item => {
                 // посмотреть, что находится внутри коммита
@@ -56,6 +57,12 @@ function viewCommits() {
                 // потом этот элемент закинуть в slider_item и добавить в контейнер
                 // аналогично с другими элементами
             });
+            // .then(result => {
+            //     if (result.ok) {
+            //         return result.json();
+            //     }
+            //     return Promise.reject(`Ошибка: ${result.status}`);
+            // });
         });
 };
 
