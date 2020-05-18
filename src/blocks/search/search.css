@@ -5,6 +5,9 @@
 @import url(__button/search__button.css);
 @import url(__input/search__input.css);
 @import url(__wrapper/search__wrapper.css);
+@import url(__error/search__error.css);
+@import url(__error/_hide/search__error_hide.css);
+
 
 .search {
     background: url(../../images/header_bg.png) no-repeat 50%;
