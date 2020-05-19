@@ -16,28 +16,23 @@ class DataStorage {
                 titleMentionCount++;
             }
 
-            let articleDate = new Date(article.publishedAt).getDate();
-            if (typeof (statistics[articleDate]) == 'undefined') {
-                statistics[articleDate] = 1;
+            const articleDate = new Date(article.publishedAt);
+            const dayOfMonth = articleDate.getDate();
+
+            const daysOfWeek = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
+            const dayOfWeek = daysOfWeek[articleDate.getDay()];
+
+            const dateKey = `${dayOfMonth}, ${dayOfWeek}`;
+            if (typeof (statistics[dateKey]) == 'undefined') {
+                statistics[dateKey] = 1;
             }
             else {
-                statistics[articleDate]++;
+                statistics[dateKey]++;
             }
         });
 
         localStorage.setItem('TITLE-MENTION-COUNT', titleMentionCount);
         localStorage.setItem('STATISTICS', JSON.stringify(statistics))
-
-
-        console.log(this.getNewsCount());
-        console.log(this.getQueryName());
-        console.log(this.getTitleMentionCount());
-        console.log(this.getStatistics());
-
-        for (let [key, value] of Object.entries(statistics)) {
-            console.log(`${key}: ${value}`);
-        }
-
     }
 
     getQueryName() {

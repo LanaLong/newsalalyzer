@@ -15,13 +15,14 @@ class CommitCardList {
 
 
             console.log(item.author.avatar_url);
+            let commitCard = '';
 
             if (showedCards < 3) {
                 showedCards++;
-                let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, true);
+                commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, true);
             }
             else {
-                let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, false);
+                commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, false);
             }
 
 

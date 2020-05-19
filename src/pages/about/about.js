@@ -65,7 +65,7 @@ function viewCommits() {
             // });
         })
         .catch(error => {
-            window.alert(error);
+            console.log(error);
         });
 };
 

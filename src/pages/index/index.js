@@ -42,6 +42,7 @@ function viewNews(event) {
             if (res.articles.length == 0) {
                 noResults.classList.remove('no-results_hidden');
                 preloader.classList.add('preloader_hidden');
+                resulSection.classList.add('result_hidden');
                 return;
             }
             else {
