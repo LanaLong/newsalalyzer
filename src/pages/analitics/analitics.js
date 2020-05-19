@@ -18,10 +18,15 @@ requestWeekCount.textContent = dataStorage.getNewsCount();
 requestTitleCount.textContent = dataStorage.getTitleMentionCount();
 
 console.log(dataStorage.getStatistics());
+var parsedStatistics = JSON.parse(dataStorage.getStatistics());
 
-for (let [date, count] of Object.entries(JSON.parse(dataStorage.getStatistics()))) {
 
-    let statisticsLine = new Statistics(date, count);
-    console.log(statisticsLine);
-    schemeItems.insertAdjacentHTML('beforeend', statisticsLine.createSchemeItem());
-}
+Object.keys(parsedStatistics)
+    .sort()
+    .forEach(function (v, i) {
+        let statisticsInfo = parsedStatistics[v];
+
+        let statisticsLine = new Statistics(statisticsInfo.date, statisticsInfo.articlesCount);
+        console.log(statisticsLine);
+        schemeItems.insertAdjacentHTML('beforeend', statisticsLine.createSchemeItem());
+    });

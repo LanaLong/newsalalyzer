@@ -23,11 +23,17 @@ class DataStorage {
             const dayOfWeek = daysOfWeek[articleDate.getDay()];
 
             const dateKey = `${dayOfMonth}, ${dayOfWeek}`;
-            if (typeof (statistics[dateKey]) == 'undefined') {
-                statistics[dateKey] = 1;
+
+            const dataSortKey = articleDate.getMonth() * 100 + articleDate.getDate();
+
+            if (typeof (statistics[dataSortKey]) == 'undefined') {
+                statistics[dataSortKey] = {
+                    date: dateKey,
+                    articlesCount: 1
+                };
             }
             else {
-                statistics[dateKey]++;
+                statistics[dataSortKey].articlesCount++;
             }
         });
 

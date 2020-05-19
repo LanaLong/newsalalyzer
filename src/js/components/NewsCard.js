@@ -26,7 +26,7 @@ class NewsCard {
                     class="result__image">
                 <div class="result__info">
                     <div class="result__text-container">
-                        <time class="text_type_date result__date" datetime="2019-08-02">${stringDate}</time>
+                        <time class="text_type_date result__date" datetime="YYYY-DD-MM">${stringDate}</time>
                         <h3 class="title result__card-title">${this.newsTitle}</h3>
                         <p class="text result__text">${this.newsText}</p>
                     </div>
