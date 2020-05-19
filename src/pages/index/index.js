@@ -8,6 +8,11 @@ import { NewsCardList } from '../../js/components/NewsCardList';
 const searchForm = document.querySelector('.search__form');
 const searchInput = document.querySelector('.search__input');
 const searchButton = document.querySelector('.search__button');
+const searchError = document.querySelector('.search__error');
+const resulSection = document.querySelector('.result');
+const preloader = document.querySelector('.preloader');
+const noResults = document.querySelector('.no-results');
+const requestError = document.querySelector('.results-error');
 
 const showMoreButton = document.querySelector('.result__button');
 
@@ -25,15 +30,35 @@ let showedCardsCount = 3;
 
 function viewNews(event) {
     event.preventDefault();
+    preloader.classList.remove('preloader_hidden');
+    requestError.classList.add('results-error_hidden');
+
     const query = event.target[0].value;
     console.log(event);
     let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 12)
         .then(res => res.json())
         .then(res => {
+
+            if (res.articles.length == 0) {
+                noResults.classList.remove('no-results_hidden');
+                preloader.classList.add('preloader_hidden');
+                return;
+            }
+            else {
+                if (!noResults.classList.contains('no-results_hidden')) {
+                    noResults.classList.add('no-results_hidden');
+                }
+            }
+
             dataStorage.storeQueryResult(res, query);
 
             let newsList = newsCardList.createCardList(res.articles);
             console.log(newsList);
+
+
+            preloader.classList.add('preloader_hidden');
+            resulSection.classList.remove('result_hidden');
+
 
             setCardsVisibility();
             // .then(result => {
@@ -49,6 +74,10 @@ function viewNews(event) {
             // let resultItems = document.querySelector('.result__items');
             // let resultItem = document.querySelector('.result__item');
             // ...
+        })
+        .catch(error => {
+            console.log(error);
+            requestError.classList.remove('results-error_hidden');
         });
 
 
@@ -90,11 +119,24 @@ function setCardsVisibility() {
     });
 
     if (cardsContainer.children.length == resultVisibleCardsCount) {
-        showMoreButton.setAttribute('disabled', true);
+        showMoreButton.classList.add('button_hidden');
+    }
+    else {
+        showMoreButton.classList.remove('button_hidden');
     }
 
 }
 
 searchForm.addEventListener('submit', viewNews);
 showMoreButton.addEventListener('click', setCardsVisibility);
-
+searchInput.addEventListener('input', (event) => {
+    let input = event.target;
+    if (input.validity.valueMissing || input.validity.tooShort) {
+        searchError.classList.remove('search__error_hide');
+        return false;
+    }
+    else {
+        searchError.classList.add('search__error_hide');
+        return true;
+    }
+});

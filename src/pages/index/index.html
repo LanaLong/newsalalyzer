@@ -52,7 +52,7 @@
     </section>
 
     <main>
-        <section class="preloader">
+        <section class="preloader preloader_hidden">
             <div class="container preloader__container">
                 <i class="preloader__icon"></i>
                 <p class="preloader__text text_type_minor">Идет поиск новостей...</p>
@@ -69,7 +69,22 @@
             </div>
         </section>
 
-        <section class="result">
+        <section class="results-error results-error_hidden">
+            <div class="container no-results__container">
+                <img src="<%=require('../../images/not-found.svg').default%>" alt="Ничего не найдено"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Произошла ошибка</h3>
+                <p class="no-results__subtitle text_type_minor">Во время запроса произошла ошибка. Возможно, проблема с
+                    соединением или сервер недоступен. Подождите немного и
+                    попробуйте ещё раз
+                </p>
+            </div>
+        </section>
+
+
+
+
+        <section class="result result_hidden">
             <div class="container result__container">
                 <div class="result__header">
                     <h2 class="title result__header-title">Результаты поиска</h2>

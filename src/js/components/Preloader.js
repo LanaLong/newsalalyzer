@@ -5,7 +5,7 @@ export default class Preloader {
 
     viewPreloader() {
         return `
-         <section class="preloader">
+         <section class="preloader preloader_hidden">
             <div class="container preloader__container">
                 <i class="preloader__icon"></i>
                 <p class="preloader__text text_type_minor">Идет поиск новостей...</p>

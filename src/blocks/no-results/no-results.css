@@ -2,12 +2,13 @@
 @import url(__subtitle/no-results__subtitle.css);
 @import url(__title/no-results__title.css);
 @import url(__container/no-results__container.css);
+@import url(_hidden/no-results_hidden.css);
 
 .no-results {
     height: 374px;
     background: #F5F6F7;
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    display: none; 
+    /* display: none;  */
     /*  for level-1 */
 }

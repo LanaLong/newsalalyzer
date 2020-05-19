@@ -5,7 +5,7 @@ export default class RequestError {
 
     veiwRequestError() {
         return `
-        <section class="no-results">
+        <section class="no-results no-results_hidden">
             <div class="container no-results__container">
                 <img src="<%=require('../../images/not-found.svg').default%>" alt="Ничего не найдено"
                     class="no-results__img">

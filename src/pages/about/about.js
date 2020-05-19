@@ -63,6 +63,9 @@ function viewCommits() {
             //     }
             //     return Promise.reject(`Ошибка: ${result.status}`);
             // });
+        })
+        .catch(error => {
+            window.alert(error);
         });
 };
 
