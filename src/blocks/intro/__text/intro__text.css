@@ -17,7 +17,6 @@
     }
 
     .intro__text:last-child {
-    padding-bottom: 0;
-    
-}
+        padding-bottom: 0;
+    }
 }

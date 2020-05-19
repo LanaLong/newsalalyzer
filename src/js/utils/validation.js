@@ -1,5 +1,4 @@
-const searchForm = document.forms.form;
-const searchInput = searchForm.elements.search;
+const searchForm = document.querySelector('.search__form');
 const searchButton = document.querySelector('.search__button');
 const searchError = document.querySelector('.search__error');
 

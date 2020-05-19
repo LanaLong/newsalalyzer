@@ -1,7 +1,7 @@
 import './index.css';
 import { NewsApi } from '../../js/modules/NewsApi';
 import { QueryBuider } from '../../js/utils/QueryBuilder';
-import { NEWS_API_KEY } from '../../js/constants/cards-constants';
+// import { NEWS_API_KEY } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
 
@@ -23,7 +23,7 @@ const dataStorage = new DataStorage();
 
 const newsCardList = new NewsCardList();
 
-let showedCardsCount = 3;
+// let showedCardsCount = 3;
 
 function viewNews(event) {
     event.preventDefault();
@@ -59,43 +59,12 @@ function viewNews(event) {
 
 
             setCardsVisibility();
-            // .then(result => {
-            //     if (result.ok) {
-            //         return result.json();
-            //     }
-            //     return Promise.reject(`Ошибка: ${result.status}`);
-            // });
 
-            // в аrticle есть все информация по конкретной статье
-            // нужно создавать карточку, заполнять ее данными из article
-            // и добавлять в result_items
-            // let resultItems = document.querySelector('.result__items');
-            // let resultItem = document.querySelector('.result__item');
-            // ...
         })
         .catch(error => {
             console.log(error);
             requestError.classList.remove('results-error_hidden');
         });
-
-
-
-
-
-
-    // - удалить старые карточки(отдельный метод)
-
-    // - похимичить с классами
-
-    // - показать прелоадер
-
-    // - задизейблить кнопку поиска
-    //searchButton.setAttribute('disable', true);
-
-    // - вызвать getNews у newApiClient
-
-    // - базово прописать then и catch у getNews
-
 }
 
 function setCardsVisibility() {

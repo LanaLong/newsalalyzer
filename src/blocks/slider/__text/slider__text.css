@@ -9,11 +9,7 @@
     .slider__text {
         min-width: 296px;
     }
-
 }
 
 @media screen and (max-width:576px) {
-  .slider__text {
-  }
-
 }

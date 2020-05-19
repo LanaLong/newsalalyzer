@@ -1,15 +1,14 @@
 import './analitics.css';
 import { DataStorage } from '../../js/modules/DataStorage';
-import { Statistic, Statistics } from '../../js/components/Statistics';
+import { Statistics } from '../../js/components/Statistics';
 
 const requestKeyWord = document.querySelector('#keyWord');
 const requestWeekCount = document.querySelector('#weekCount');
 const requestTitleCount = document.querySelector('#titleCount');
 const schemeItems = document.querySelector('.scheme__items');
-const schemeItem = document.querySelector('.scheme__item');
-const schemeDataItem = document.querySelector('.scheme__data-item');
-const schemeValueItem = document.querySelector('.scheme__value-item');
-
+// const schemeItem = document.querySelector('.scheme__item');
+// const schemeDataItem = document.querySelector('.scheme__data-item');
+// const schemeValueItem = document.querySelector('.scheme__value-item');
 
 const dataStorage = new DataStorage();
 

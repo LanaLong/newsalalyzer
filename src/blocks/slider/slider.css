@@ -14,7 +14,6 @@
 @import url(__info-text/slider__info-text.css);
 @import url(__item/_hidden/slider__item_hidden.css);
 
-
 .slider {
     position: relative;
 }

@@ -1,4 +1,4 @@
-import { NEWS_API_KEY } from '../constants/cards-constants';
+import { NEWS_API_KEY } from '../constants/constants';
 import { QueryBuider } from '../utils/QueryBuilder';
 
 class NewsApi {
@@ -23,11 +23,6 @@ class NewsApi {
             }
         });
     }
-
-
-    // return Promise.reject(`Ошибка: ${result.status}`);  
-
-
 }
 
 export { NewsApi };

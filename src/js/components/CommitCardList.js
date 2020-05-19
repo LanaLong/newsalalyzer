@@ -7,7 +7,6 @@ class CommitCardList {
 
     createCommitCardList(data) {
         const sliderWrapper = document.querySelector('.slider__swiper-wrapper');
-        // const sliderItem = document.querySelector('.slider__item');
 
         let showedCards = 0;
 
@@ -30,13 +29,5 @@ class CommitCardList {
         });
     }
 }
-
-// const sliderContainer = document.querySelector('.slider__swiper-container');
-// const sliderWrapper = document.querySelector('.slider__swiper-wrapper');
-// const sliderSlide = document.querySelector('.slider__swiper-slide');
-// const sliderItem = document.querySelector('.slider__item');
-// const sliderData = document.querySelector('.slider__data');
-// const sliderInfo = document.querySelector('.slider__info');
-// const sliderText = document.querySelector('.slider__text');
 
 export { CommitCardList };

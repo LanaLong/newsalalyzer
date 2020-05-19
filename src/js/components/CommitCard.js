@@ -17,7 +17,6 @@ class CommitCard {
 
         let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`;
 
-
         return `
             <div class="slider__item">
                 <time class="text slider__data" datetime="2019-08-14">${stringDate}</time>
@@ -33,9 +32,6 @@ class CommitCard {
             </div>
         `
     }
-
-    // const sliderContainer = document.querySelector('.slider__swiper-slide');
-    // sliderContainer.append(...);
 }
 
 export { CommitCard };

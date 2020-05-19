@@ -1,8 +1,10 @@
+// Statistics.Класс, отвечающий за логику работы графиков со статистикой на странице аналитики.
+// Конструктор класса получает объект, содержащий текущее состояние локального браузерного хранилища.
+
 class Statistics {
     constructor(lineDate, lineValue) {
         this.lineDate = lineDate;
         this.lineValue = lineValue;
-
     }
 
     createSchemeItem(data) {
@@ -16,13 +18,6 @@ class Statistics {
             </div>
         `
     }
-
-    // сформировать строки в таблицу аналитики
-    // schemeItems.append(...);
-
-
-
-
 }
 
 export { Statistics };

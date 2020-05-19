@@ -16,7 +16,6 @@ class NewsCardList {
             resultItems.insertAdjacentHTML('afterbegin', newsCard.createMarkup());
         });
     }
-
 }
 
 export { NewsCardList };
