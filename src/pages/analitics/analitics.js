@@ -1,5 +1,6 @@
 import './analitics.css';
 import { DataStorage } from '../../js/modules/DataStorage';
+import { Statistic, Statistics } from '../../js/components/Statistics';
 
 const requestKeyWord = document.querySelector('#keyWord');
 const requestWeekCount = document.querySelector('#weekCount');
@@ -17,3 +18,10 @@ requestWeekCount.textContent = dataStorage.getNewsCount();
 requestTitleCount.textContent = dataStorage.getTitleMentionCount();
 
 console.log(dataStorage.getStatistics());
+
+for (let [date, count] of Object.entries(JSON.parse(dataStorage.getStatistics()))) {
+
+    let statisticsLine = new Statistics(date, count);
+    console.log(statisticsLine);
+    schemeItems.insertAdjacentHTML('beforeend', statisticsLine.createSchemeItem());
+}

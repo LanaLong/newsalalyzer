@@ -32,7 +32,7 @@ function viewNews(event) {
 
     const query = event.target[0].value;
     console.log(event);
-    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 12)
+    let result = newsApiClient.getNews('2020-05-08', '2020-05-15', query, 100)
         .then(res => res.json())
         .then(res => {
 
