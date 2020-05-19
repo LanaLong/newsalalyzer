@@ -25,9 +25,6 @@ const newsCardList = new NewsCardList();
 
 let showedCardsCount = 3;
 
-// setNewsCardsInfo() {
-// };
-
 function viewNews(event) {
     event.preventDefault();
     preloader.classList.remove('preloader_hidden');

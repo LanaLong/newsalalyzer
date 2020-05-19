@@ -7,12 +7,10 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    /* box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2); */
     border: 0;
     border-radius: 50px;
     padding: 20px 53px;
     cursor: pointer;
-    /* align-items: center; */
 }
 
 .search__button:hover {
@@ -23,10 +21,6 @@
     background: #2A65CC;
 }
 
-/* button.click(function () {
-  button.css('border', '1px solid #2A65CC');
-} */
-
 @media screen and (max-width: 768px) {
     .search__button {
         padding: 16px 50px;        
@@ -35,6 +29,7 @@
 
 @media screen and (max-width: 576px) {
     .search__button {
-        margin-top: 38px;     
+        margin-top: 38px; 
+        position: static;    
     }
 }
