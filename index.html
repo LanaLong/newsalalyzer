@@ -12,7 +12,7 @@
     <meta name="author" lang="ru" content="LanaLong">
 
     <title>NewsAnalyzer | Главная</title>
-    <link rel="stylesheet" href="./styles/index.d180c6d31e39accd31ec.css">
+    <link rel="stylesheet" href="./styles/index.ee1ea984f522492886be.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/ico">
 </head>
 
@@ -43,7 +43,7 @@
                     новостях за прошедшую неделю.</p>
                 <form name="search" class="text search__form">
                     <input type="text" name="search" class="search__input" placeholder="Введите тему новости"
-                        minlength="3" maxlength="20" name="keyword" required>
+                        minlength="2" maxlength="20" name="keyword" required>
                     <button type="submit" class="search__button">Искать</button>
                 </form>
                 <span class="search__error search__error_hide">Нужно ввести ключевое слово</span>
@@ -52,14 +52,14 @@
     </section>
 
     <main>
-        <section class="preloader">
+        <section class="preloader preloader_hidden">
             <div class="container preloader__container">
                 <i class="preloader__icon"></i>
                 <p class="preloader__text text_type_minor">Идет поиск новостей...</p>
             </div>
         </section>
 
-        <section class="no-results">
+        <section class="no-results no-results_hidden">
             <div class="container no-results__container">
                 <img src="./images/not-found.svg" alt="Ничего не найдено"
                     class="no-results__img">
@@ -69,7 +69,22 @@
             </div>
         </section>
 
-        <section class="result">
+        <section class="no-results no-results_type_error no-results_hidden">
+            <div class="container no-results__container">
+                <img src="./images/not-found.svg" alt="Произошла ошибка"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Произошла ошибка</h3>
+                <p class="no-results__subtitle text_type_minor">Во время запроса произошла ошибка. Возможно, проблема с
+                    соединением или сервер недоступен. Подождите немного и
+                    попробуйте ещё раз
+                </p>
+            </div>
+        </section>
+
+
+
+
+        <section class="result result_hidden">
             <div class="container result__container">
                 <div class="result__header">
                     <h2 class="title result__header-title">Результаты поиска</h2>
@@ -149,7 +164,8 @@
     <footer class="footer">
         <div class="container footer__container">
             <div class="text footer__content">
-                <p class="footer__copy">&copy; 2020 NewsAnalyzer | Powered by News API</p>
+                <p class="footer__copy">&copy; 2020 NewsAnalyzer</p>
+                <!-- NewsAnalyzer | Powered by News API -->
                 <nav class="footer__nav">
                     <ul class="footer__items">
                         <li class="footer__item">
@@ -175,7 +191,7 @@
             </div>
         </div>
     </footer>
-    <script src="./script/index.d180c6d31e39accd31ec.js"></script>
+    <script src="./script/index.ee1ea984f522492886be.js"></script>
 </body>
 
 </html>
