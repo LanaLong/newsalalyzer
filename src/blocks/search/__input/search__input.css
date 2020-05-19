@@ -21,7 +21,8 @@
 }
 
 .search__input:focus {
-  outline-offset: 0;
+    outline-offset: 0;
+    border: 1px solid #347eff;
 }
 
 @media screen and (max-width: 768px) {
