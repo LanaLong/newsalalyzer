@@ -1,6 +1,7 @@
 // VERSION 3
 class NewsCard {
-    constructor(newsImgLink, newsDate, newsTitle, newsText, newsSource) {
+    constructor(newsLink, newsImgLink, newsDate, newsTitle, newsText, newsSource) {
+        this.newsLink = newsLink;
         this.newsImgLink = newsImgLink;
         this.newsDate = newsDate;
         this.newsTitle = newsTitle;
@@ -20,16 +21,18 @@ class NewsCard {
 
 
         return `
-            <div class="result__item result__item_hidden">
-                <img src="${this.newsImgLink}" alt="Card image"
+            <a href="${this.newsLink}" class="result__item result__item_hidden" target="_blank">
+                <img src="${this.newsImgLink}" alt="${this.newsTitle}"
                     class="result__image">
                 <div class="result__info">
-                    <time class="text_type_date result__date" datetime="2019-08-02">${stringDate}</time>
-                    <h3 class="title result__card-title">${this.newsTitle}</h3>
-                    <p class="text result__text">${this.newsText}</p>
+                    <div class="result__text-container">
+                        <time class="text_type_date result__date" datetime="2019-08-02">${stringDate}</time>
+                        <h3 class="title result__card-title">${this.newsTitle}</h3>
+                        <p class="text result__text">${this.newsText}</p>
+                    </div>
+                    <p class="text_type_label result__source">${this.newsSource}</p>
                 </div>
-                <a href="#" class="text_type_label link result__source">${this.newsSource}</a>
-            </div>
+            </a>
         `
     }
 }
