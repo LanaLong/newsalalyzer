@@ -4,7 +4,7 @@
     padding: 24px;
     min-height: 288px;
     min-width: 400px;
-    margin: 0 auto;
+    margin: 0 8px;
     box-sizing: border-box;
     transition: box-shadow .3s ease;
 }
