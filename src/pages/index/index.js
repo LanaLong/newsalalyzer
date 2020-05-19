@@ -12,7 +12,7 @@ const searchError = document.querySelector('.search__error');
 const resulSection = document.querySelector('.result');
 const preloader = document.querySelector('.preloader');
 const noResults = document.querySelector('.no-results');
-const requestError = document.querySelector('.results-error');
+const requestError = document.querySelector('.no-results_type_error');
 
 const showMoreButton = document.querySelector('.result__button');
 

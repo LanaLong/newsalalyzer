@@ -3,12 +3,9 @@
 @import url(__title/no-results__title.css);
 @import url(__container/no-results__container.css);
 @import url(_hidden/no-results_hidden.css);
+@import url(_type_error/no-results_type_error.css);
 
 .no-results {
     height: 374px;
     background: #F5F6F7;
-    /* display: flex; */
-    align-items: center;
-    /* display: none;  */
-    /*  for level-1 */
 }

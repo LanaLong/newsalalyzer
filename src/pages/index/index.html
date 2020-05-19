@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section class="no-results">
+        <section class="no-results no-results_hidden">
             <div class="container no-results__container">
                 <img src="<%=require('../../images/not-found.svg').default%>" alt="Ничего не найдено"
                     class="no-results__img">
@@ -69,9 +69,9 @@
             </div>
         </section>
 
-        <section class="results-error results-error_hidden">
+        <section class="no-results no-results_type_error no-results_hidden">
             <div class="container no-results__container">
-                <img src="<%=require('../../images/not-found.svg').default%>" alt="Ничего не найдено"
+                <img src="<%=require('../../images/not-found.svg').default%>" alt="Произошла ошибка"
                     class="no-results__img">
                 <h3 class="title no-results__title">Произошла ошибка</h3>
                 <p class="no-results__subtitle text_type_minor">Во время запроса произошла ошибка. Возможно, проблема с
