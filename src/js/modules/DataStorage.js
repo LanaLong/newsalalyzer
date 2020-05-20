@@ -8,6 +8,8 @@ class DataStorage {
         localStorage.setItem('NEWS-COUNT', result.totalResults);
         localStorage.setItem('QUERY-NAME', query);
 
+        const months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+
         let titleMentionCount = 0;
         let statistics = {};
         result.articles.forEach(article => {

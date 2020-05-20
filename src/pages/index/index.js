@@ -32,7 +32,15 @@ function viewNews(event) {
 
     const query = event.target[0].value;
     console.log(event);
-    let result = newsApiClient.getNews('2020-04-28', '2020-05-15', query, 100)
+    let toDate = new Date();
+    let fromDate = new Date();
+    fromDate.setDate(fromDate.getDate() - 7);
+
+
+    let from = `${fromDate.getFullYear()}-0${fromDate.getMonth() + 1}-${fromDate.getDate()}`;
+    let to = `${toDate.getFullYear()}-0${toDate.getMonth() + 1}-${toDate.getDate()}`;
+
+    let result = newsApiClient.getNews(from, to, query, 100, 'ru')
         .then(res => res.json())
         .then(res => {
 
@@ -48,7 +56,7 @@ function viewNews(event) {
                 }
             }
 
-            dataStorage.storeQueryResult(res, query);
+            dataStorage.storeQueryResult(res, query, toDate.getMonth());
 
             let newsList = newsCardList.createCardList(res.articles);
             console.log(newsList);

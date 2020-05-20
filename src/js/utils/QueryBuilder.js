@@ -46,6 +46,10 @@ class queryBuider {
             queryString += `pageSize=${this.pageSize}&`;
         }
 
+        if (typeof (this.language) != 'undefined') {
+            queryString += `language=${this.language}&`;
+        }
+
         if (queryString != '') {
             //remove last '&'
             queryString = queryString.slice(0, -1);
