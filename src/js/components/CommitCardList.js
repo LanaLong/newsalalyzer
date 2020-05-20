@@ -2,19 +2,15 @@ import { CommitCard } from './CommitCard';
 
 class CommitCardList {
     constructor() {
-
+        this.sliderWrapper = document.querySelector('.slider__swiper-wrapper');
     }
 
     createCommitCardList(data) {
-        const sliderWrapper = document.querySelector('.slider__swiper-wrapper');
-
-        let showedCards = 0;
 
         data.forEach(item => {
-            console.log(item);
-            let commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, true);
+            let commitCard = this.createCommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message);
 
-            sliderWrapper.insertAdjacentHTML('beforeend', commitCard.createMarkup());
+            this.sliderWrappersliderWrapper.insertAdjacentHTML('beforeend', commitCard.createMarkup());
         });
     }
 }

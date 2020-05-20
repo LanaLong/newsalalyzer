@@ -16,11 +16,12 @@ class CommitCard {
         let dateYear = date.getFullYear();
 
         let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`;
+        let stringDateTimeTag = `${dateYear}-${dateDay}-${date.getMonth()}`;
 
         return `
         <div class="swiper-slide slider__swiper-slide">
             <div class="slider__item">
-                <time class="text slider__data" datetime="2019-08-14">${stringDate}</time>
+                <time class="text slider__data" datetime=${stringDateTimeTag}>${stringDate}</time>
                 <div class="slider__info">
                     <img src="${this.ghAvatar}" alt="Avatar img"
                         class="slider__avatar">

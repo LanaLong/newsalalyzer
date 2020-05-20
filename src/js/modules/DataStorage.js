@@ -3,12 +3,14 @@ class DataStorage {
 
     }
 
-    storeQueryResult(result, query) {
+    storeQueryResult(result, query, currentMonth) {
         console.log(result);
         localStorage.setItem('NEWS-COUNT', result.totalResults);
         localStorage.setItem('QUERY-NAME', query);
 
         const months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+        localStorage.setItem('CURRENT-MONTH', months[currentMonth]);
+
 
         let titleMentionCount = 0;
         let statistics = {};
@@ -57,6 +59,10 @@ class DataStorage {
 
     getStatistics() {
         return localStorage.getItem('STATISTICS');
+    }
+
+    getCurrentMonth() {
+        return localStorage.getItem('CURRENT-MONTH');
     }
 }
 

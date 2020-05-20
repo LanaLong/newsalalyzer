@@ -22,7 +22,7 @@ class NewsApi {
             headers: {
                 'X-Api-Key': '2479e7eabf734c26bbff814e3e9761c2'
             }
-        });
+        }).then(res => res.json());
     }
 }
 

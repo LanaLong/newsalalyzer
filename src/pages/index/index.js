@@ -4,26 +4,25 @@ import { queryBuider } from '../../js/utils/queryBuilder';
 import { NEWS_API_URL } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
+import { SearchInput } from '../../js/components/SearchInput';
+import { NewsCard } from '../../js/components/NewsCard';
 
-const searchForm = document.querySelector('.search__form');
-const searchInput = document.querySelector('.search__input');
-const searchButton = document.querySelector('.search__button');
 const searchError = document.querySelector('.search__error');
 const resulSection = document.querySelector('.result');
 const preloader = document.querySelector('.preloader');
 const noResults = document.querySelector('.no-results');
 const requestError = document.querySelector('.no-results_type_error');
-
 const showMoreButton = document.querySelector('.result__button');
 
 const newsQueryBuilder = new queryBuider(NEWS_API_URL);
-
 const newsApiClient = new NewsApi(newsQueryBuilder);
+
 const dataStorage = new DataStorage();
 
-const newsCardList = new NewsCardList();
+const createCard = (...args) => new NewsCard(...args);
+const newsCardList = new NewsCardList(createCard);
 
-// let showedCardsCount = 3;
+const input = new SearchInput();
 
 function viewNews(event) {
     event.preventDefault();
@@ -41,7 +40,6 @@ function viewNews(event) {
     let to = `${toDate.getFullYear()}-0${toDate.getMonth() + 1}-${toDate.getDate()}`;
 
     let result = newsApiClient.getNews(from, to, query, 100, 'ru')
-        .then(res => res.json())
         .then(res => {
 
             if (res.articles.length == 0) {
@@ -101,9 +99,9 @@ function setCardsVisibility() {
 
 }
 
-searchForm.addEventListener('submit', viewNews);
 showMoreButton.addEventListener('click', setCardsVisibility);
-searchInput.addEventListener('input', (event) => {
+
+function validateInput(event) {
     let input = event.target;
     if (input.validity.valueMissing || input.validity.tooShort) {
         searchError.classList.remove('search__error_hide');
@@ -113,4 +111,7 @@ searchInput.addEventListener('input', (event) => {
         searchError.classList.add('search__error_hide');
         return true;
     }
-});
+}
+
+input.setSubmitListener(viewNews);
+input.setInputListener(validateInput)
