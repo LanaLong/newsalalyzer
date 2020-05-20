@@ -10,7 +10,7 @@ class NewsCard {
 
     createMarkup(data) {
         let date = new Date(this.newsDate);
-        let month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
         let dateDay = date.getDay() + 1;
         let dateMonth = month[date.getMonth()];

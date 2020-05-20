@@ -1,5 +1,5 @@
 import { NEWS_API_KEY } from '../constants/constants';
-import { QueryBuider } from '../utils/QueryBuilder';
+import { queryBuider } from '../utils/queryBuilder';
 
 class NewsApi {
 

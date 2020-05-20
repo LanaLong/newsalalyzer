@@ -1,4 +1,4 @@
-class QueryBuider {
+class queryBuider {
     constructor(url) {
         this.url = url; //https://newsapi.org/v2/everything
     }
@@ -57,4 +57,4 @@ class QueryBuider {
 
 }
 
-export { QueryBuider };
+export { queryBuider };

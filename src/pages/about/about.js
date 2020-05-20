@@ -1,5 +1,5 @@
 import '../../vendor/swiper/swiper.min.css';
-import { QueryBuider } from '../../js/utils/QueryBuilder';
+import { queryBuider } from '../../js/utils/queryBuilder';
 import { GitHubApi } from '../../js/modules/GitHubApi';
 import { CommitCardList } from '../../js/components/CommitCardList';
 
@@ -32,7 +32,7 @@ const swiper = new Swiper('.swiper-container', {
 // const sliderInfo = document.querySelector('.slider__info');
 // const sliderText = document.querySelector('.slider__text');
 
-const githubQueryBuilder = new QueryBuider('https://api.github.com/repos/LanaLong/newsalalyzer/commits');
+const githubQueryBuilder = new queryBuider('https://api.github.com/repos/LanaLong/newsalalyzer/commits');
 const githubClient = new GitHubApi(githubQueryBuilder);
 
 const commitCardList = new CommitCardList();

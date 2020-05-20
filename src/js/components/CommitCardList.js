@@ -11,9 +11,7 @@ class CommitCardList {
         let showedCards = 0;
 
         data.forEach(item => {
-
-
-            console.log(item.author.avatar_url);
+            // console.log(item.author.avatar_url);
             let commitCard = '';
 
             if (showedCards < 3) {
@@ -23,7 +21,6 @@ class CommitCardList {
             else {
                 commitCard = new CommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message, false);
             }
-
 
             sliderWrapper.insertAdjacentHTML('afterbegin', commitCard.createMarkup());
         });

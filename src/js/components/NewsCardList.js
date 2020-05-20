@@ -7,6 +7,7 @@ class NewsCardList {
 
     createCardList(data) {
         const resultItems = document.querySelector('.result__items');
+
         while (resultItems.firstChild) {
             resultItems.removeChild(resultItems.lastChild);
         }
