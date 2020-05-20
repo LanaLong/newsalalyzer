@@ -7,7 +7,7 @@
 }
 
 .search__form:focus-within {
-    border: 2px solid rgba(57, 83, 128, 0.8);
+    border: 2px solid #2f71e5;
 }
 
 @media screen and (max-width: 768px) {

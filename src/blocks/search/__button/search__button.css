@@ -21,6 +21,10 @@
     background: #2A65CC;
 }
 
+.search__button:focus {
+   outline: none;
+}
+
 @media screen and (max-width: 768px) {
     .search__button {
         padding: 16px 50px;        
