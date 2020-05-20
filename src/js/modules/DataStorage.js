@@ -12,7 +12,7 @@ class DataStorage {
 
 
         this.titleMentionCount = 0;
-        let statistics = this._evaluateStatistics(result.articles, query);
+        const statistics = this._evaluateStatistics(result.articles, query);
 
         localStorage.setItem('TITLE-MENTION-COUNT', this.titleMentionCount);
         localStorage.setItem('STATISTICS', JSON.stringify(statistics))

@@ -1,5 +1,4 @@
 import { NEWS_API_KEY } from '../constants/constants';
-import { queryBuider } from '../utils/queryBuilder';
 
 class NewsApi {
 
