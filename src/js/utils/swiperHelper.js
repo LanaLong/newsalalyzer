@@ -1,7 +1,7 @@
 class swiperHelper {
 
     static GetContainerName() {
-        return '.swiper - container';
+        return '.swiper-container';
     }
 
     static GetOptions() {

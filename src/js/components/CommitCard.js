@@ -1,3 +1,6 @@
+import { dateHelper } from '../utils/dateHelper';
+
+
 class CommitCard {
     constructor(commitDate, ghAvatar, commitAuthor, commitEmail, commitText) {
         this.commitDate = commitDate;
@@ -8,20 +11,14 @@ class CommitCard {
     }
 
     createMarkup(data) {
-        let date = new Date(this.commitDate);
-        let month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
-        let dateDay = date.getDay() + 1;
-        let dateMonth = month[date.getMonth()];
-        let dateYear = date.getFullYear();
-
-        let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`;
-        let stringDateTimeTag = `${dateYear}-${dateDay}-${date.getMonth()}`;
+        const commitDate = dateHelper.ToCommitDateFormat(this.commitDate);
+        const commitDateTag = dateHelper.ToDateTagFormat(this.commitDate);
 
         return `
         <div class="swiper-slide slider__swiper-slide">
             <div class="slider__item">
-                <time class="text slider__data" datetime=${stringDateTimeTag}>${stringDate}</time>
+                <time class="text slider__data" datetime=${commitDateTag}>${commitDate}</time>
                 <div class="slider__info">
                     <img src="${this.ghAvatar}" alt="Avatar img"
                         class="slider__avatar">

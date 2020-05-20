@@ -1,16 +1,15 @@
-import { CommitCard } from './CommitCard';
-
 class CommitCardList {
-    constructor() {
+    constructor(createCommitCard) {
+        this.createCommitCard = createCommitCard;
         this.sliderWrapper = document.querySelector('.slider__swiper-wrapper');
     }
 
     createCommitCardList(data) {
 
-        data.forEach(item => {
+        data.slice(0, 20).forEach(item => {
             let commitCard = this.createCommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message);
 
-            this.sliderWrappersliderWrapper.insertAdjacentHTML('beforeend', commitCard.createMarkup());
+            this.sliderWrapper.insertAdjacentHTML('beforeend', commitCard.createMarkup());
         });
     }
 }

@@ -16,11 +16,9 @@ class NewsApi {
             .setLanguage(lang)
             .build();
 
-        console.log(url);
-
         return fetch(url, {
             headers: {
-                'X-Api-Key': '2479e7eabf734c26bbff814e3e9761c2'
+                'X-Api-Key': NEWS_API_KEY
             }
         }).then(res => res.json());
     }

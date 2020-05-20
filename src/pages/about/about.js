@@ -16,7 +16,7 @@ const githubQueryBuilder = new queryBuider(GITHUB_API_URL);
 const githubClient = new GitHubApi(githubQueryBuilder);
 
 const createCommitCard = (...args) => new CommitCard(...args);
-const commitCardList = new CommitCardList();
+const commitCardList = new CommitCardList(createCommitCard);
 
 function viewCommits() {
     githubClient.getCommits()
@@ -26,7 +26,7 @@ function viewCommits() {
 
         })
         .catch(error => {
-            return Promise.reject(`Ошибка: ${result.status}`);
+            return Promise.reject(`Ошибка: ${error}`);
         });
 };
 

@@ -11,23 +11,13 @@ class NewsCard {
     }
 
     createMarkup(data) {
-        let date = new Date(this.newsDate);
-        const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-
-        let dateDay = date.getDate();
-        let dateMonth = month[date.getMonth()];
-        let dateYear = date.getFullYear();
-
-        let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`;
-        let stringDateTimeTag = `${dateYear}-${dateDay}-${date.getMonth()}`;
-
         // const defaultImage = "<%=require('../../images/not-found.svg').default%>";
         if (this.newsImgLink == null) {
             // this.newsImgLink = defaultImage;
         }
 
         const newsDate = dateHelper.ToNewsDateFormat(this.newsDate);
-        const newsDateTag = dateHelper.ToNewsDateTagFormat(this.newsDate);
+        const newsDateTag = dateHelper.ToDateTagFormat(this.newsDate);
 
         return `
             <a href="${this.newsLink}" class="result__item result__item_hidden" target="_blank">

@@ -1,47 +1,20 @@
+import { dateHelper } from '../utils/dateHelper';
+
 class DataStorage {
     constructor() {
 
     }
 
-    storeQueryResult(result, query, currentMonth) {
-        console.log(result);
+    storeQueryResult(result, query) {
         localStorage.setItem('NEWS-COUNT', result.totalResults);
         localStorage.setItem('QUERY-NAME', query);
-
-        const months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
-        localStorage.setItem('CURRENT-MONTH', months[currentMonth]);
+        localStorage.setItem('CURRENT-MONTH', dateHelper.GetCurrentMonthName());
 
 
-        let titleMentionCount = 0;
-        let statistics = {};
-        result.articles.forEach(article => {
+        this.titleMentionCount = 0;
+        let statistics = this._evaluateStatistics(result.articles, query);
 
-            if (article.title.toLowerCase().includes(query)) {
-                titleMentionCount++;
-            }
-
-            const articleDate = new Date(article.publishedAt);
-            const dayOfMonth = articleDate.getDate();
-
-            const daysOfWeek = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
-            const dayOfWeek = daysOfWeek[articleDate.getDay()];
-
-            const dateKey = `${dayOfMonth}, ${dayOfWeek}`;
-
-            const dataSortKey = articleDate.getMonth() * 100 + articleDate.getDate();
-
-            if (typeof (statistics[dataSortKey]) == 'undefined') {
-                statistics[dataSortKey] = {
-                    date: dateKey,
-                    articlesCount: 1
-                };
-            }
-            else {
-                statistics[dataSortKey].articlesCount++;
-            }
-        });
-
-        localStorage.setItem('TITLE-MENTION-COUNT', titleMentionCount);
+        localStorage.setItem('TITLE-MENTION-COUNT', this.titleMentionCount);
         localStorage.setItem('STATISTICS', JSON.stringify(statistics))
     }
 
@@ -63,6 +36,32 @@ class DataStorage {
 
     getCurrentMonth() {
         return localStorage.getItem('CURRENT-MONTH');
+    }
+
+    _evaluateStatistics(articles, query) {
+
+        let result = {};
+        articles.forEach(article => {
+
+            if (article.title.toLowerCase().includes(query)) {
+                this.titleMentionCount++;
+            }
+
+            const storageDate = dateHelper.ToStorageDate(article.publishedAt);
+            const storageDateKey = dateHelper.ToStorageDateKey(article.publishedAt);
+
+            if (typeof (result[storageDateKey]) == 'undefined') {
+                result[storageDateKey] = {
+                    date: storageDate,
+                    articlesCount: 1
+                };
+            }
+            else {
+                result[storageDateKey].articlesCount++;
+            }
+        });
+
+        return result;
     }
 }
 

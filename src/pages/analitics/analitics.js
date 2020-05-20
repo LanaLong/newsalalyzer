@@ -15,15 +15,13 @@ requestWeekCount.textContent = dataStorage.getNewsCount();
 requestTitleCount.textContent = dataStorage.getTitleMentionCount();
 dataMonth.textContent = dataStorage.getCurrentMonth();
 
-console.log(dataStorage.getStatistics());
-var parsedStatistics = JSON.parse(dataStorage.getStatistics());
+const parsedStatistics = JSON.parse(dataStorage.getStatistics());
 
 Object.keys(parsedStatistics)
     .sort()
-    .forEach(function (v, i) {
-        let statisticsInfo = parsedStatistics[v];
+    .forEach(function (key, index) {
+        let statisticsInfo = parsedStatistics[key];
 
         let statisticsLine = new Statistics(statisticsInfo.date, statisticsInfo.articlesCount);
-        console.log(statisticsLine);
         schemeItems.insertAdjacentHTML('beforeend', statisticsLine.createSchemeItem());
     });

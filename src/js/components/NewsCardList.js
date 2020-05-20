@@ -1,5 +1,3 @@
-import { NewsCard } from './NewsCard';
-
 class NewsCardList {
     constructor(createCard) {
         this.resultItems = document.querySelector('.result__items');

@@ -1,11 +1,12 @@
 import './index.css';
 import { NewsApi } from '../../js/modules/NewsApi';
 import { queryBuider } from '../../js/utils/queryBuilder';
-import { NEWS_API_URL } from '../../js/constants/constants';
+import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
 import { SearchInput } from '../../js/components/SearchInput';
 import { NewsCard } from '../../js/components/NewsCard';
+import { dateHelper } from '../../js/utils/dateHelper';
 
 const searchError = document.querySelector('.search__error');
 const resulSection = document.querySelector('.result');
@@ -25,21 +26,17 @@ const newsCardList = new NewsCardList(createCard);
 const input = new SearchInput();
 
 function viewNews(event) {
+
     event.preventDefault();
+
     preloader.classList.remove('preloader_hidden');
     requestError.classList.add('results-error_hidden');
 
     const query = event.target[0].value;
-    console.log(event);
-    let toDate = new Date();
-    let fromDate = new Date();
-    fromDate.setDate(fromDate.getDate() - 7);
 
+    const dateParameters = dateHelper.GetNewsApiDateInterval();
 
-    let from = `${fromDate.getFullYear()}-0${fromDate.getMonth() + 1}-${fromDate.getDate()}`;
-    let to = `${toDate.getFullYear()}-0${toDate.getMonth() + 1}-${toDate.getDate()}`;
-
-    let result = newsApiClient.getNews(from, to, query, 100, 'ru')
+    newsApiClient.getNews(dateParameters.from, dateParameters.to, query, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE)
         .then(res => {
 
             if (res.articles.length == 0) {
@@ -54,21 +51,17 @@ function viewNews(event) {
                 }
             }
 
-            dataStorage.storeQueryResult(res, query, toDate.getMonth());
-
-            let newsList = newsCardList.createCardList(res.articles);
-            console.log(newsList);
+            dataStorage.storeQueryResult(res, query);
+            newsCardList.createCardList(res.articles);
 
             preloader.classList.add('preloader_hidden');
             resulSection.classList.remove('result_hidden');
 
             setCardsVisibility();
-
         })
         .catch(error => {
-            // console.log(error);
             requestError.classList.remove('results-error_hidden');
-            return Promise.reject(`Ошибка: ${result.status}`);
+            return Promise.reject(`Ошибка: ${error}`);
         });
 }
 
@@ -96,7 +89,6 @@ function setCardsVisibility() {
     else {
         showMoreButton.classList.remove('button_hidden');
     }
-
 }
 
 showMoreButton.addEventListener('click', setCardsVisibility);
