@@ -5,7 +5,8 @@ class GitHubApi {
 
     getCommits() {
         const url = this._builder.build();
-        return fetch(url);
+        return fetch(url)
+            .then(res => res.json());
     }
 }
 

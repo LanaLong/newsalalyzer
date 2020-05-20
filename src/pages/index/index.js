@@ -53,17 +53,16 @@ function viewNews(event) {
             let newsList = newsCardList.createCardList(res.articles);
             console.log(newsList);
 
-
             preloader.classList.add('preloader_hidden');
             resulSection.classList.remove('result_hidden');
-
 
             setCardsVisibility();
 
         })
         .catch(error => {
-            console.log(error);
+            // console.log(error);
             requestError.classList.remove('results-error_hidden');
+            return Promise.reject(`Ошибка: ${result.status}`);
         });
 }
 

@@ -18,6 +18,7 @@ class CommitCard {
         let stringDate = `${dateDay} ${dateMonth}, ${dateYear}`;
 
         return `
+        <div class="swiper-slide slider__swiper-slide">
             <div class="slider__item">
                 <time class="text slider__data" datetime="2019-08-14">${stringDate}</time>
                 <div class="slider__info">
@@ -30,6 +31,7 @@ class CommitCard {
                 </div>
                 <p class="text slider__text">${this.commitText}</p>
             </div>
+        </div>
         `
     }
 }
