@@ -25,6 +25,11 @@ class queryBuider {
         this.language = language;
         return this;
     }
+    setApiKey(apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+
 
     build() {
 
@@ -48,6 +53,10 @@ class queryBuider {
 
         if (typeof (this.language) != 'undefined') {
             queryString += `language=${this.language}&`;
+        }
+
+        if (typeof (this.apiKey) != 'undefined') {
+            queryString += `apiKey=${this.apiKey}&`;
         }
 
         if (queryString != '') {
