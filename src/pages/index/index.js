@@ -28,6 +28,7 @@ const input = new SearchInput();
 function viewNews(event) {
 
     event.preventDefault();
+    input.block();
 
     preloader.classList.remove('preloader_hidden');
     resulSection.classList.add('result_hidden');
@@ -44,6 +45,9 @@ function viewNews(event) {
                 noResults.classList.remove('no-results_hidden');
                 preloader.classList.add('preloader_hidden');
                 resulSection.classList.add('result_hidden');
+
+
+                input.unblock();
                 return;
             }
             else {
@@ -59,10 +63,15 @@ function viewNews(event) {
             resulSection.classList.remove('result_hidden');
 
             setCardsVisibility();
+
+            input.unblock();
         })
         .catch(error => {
+
+            input.unblock();
             requestError.classList.remove('results-error_hidden');
         });
+
 }
 
 function setCardsVisibility() {

@@ -18,6 +18,16 @@ class SearchInput {
 
         return this;
     }
+
+    block() {
+        this.searchInput.setAttribute('disabled', true);
+        this.searchButton.setAttribute('disabled', true);
+    };
+
+    unblock() {
+        this.searchInput.removeAttribute('disabled');
+        this.searchButton.removeAttribute('disabled');
+    };
 }
 
 export { SearchInput };
