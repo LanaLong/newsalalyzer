@@ -8,7 +8,7 @@ class DataStorage {
     storeQueryResult(result, query) {
         localStorage.setItem('NEWS-COUNT', result.totalResults);
         localStorage.setItem('QUERY-NAME', query);
-        localStorage.setItem('CURRENT-MONTH', dateHelper.GetCurrentMonthName());
+        localStorage.setItem('CURRENT-MONTH', DateHelper.GetCurrentMonthName());
 
 
         this.titleMentionCount = 0;
@@ -47,8 +47,8 @@ class DataStorage {
                 this.titleMentionCount++;
             }
 
-            const storageDate = dateHelper.ToStorageDate(article.publishedAt);
-            const storageDateKey = dateHelper.ToStorageDateKey(article.publishedAt);
+            const storageDate = DateHelper.ToStorageDate(article.publishedAt);
+            const storageDateKey = DateHelper.ToStorageDateKey(article.publishedAt);
 
             if (typeof (result[storageDateKey]) == 'undefined') {
                 result[storageDateKey] = {

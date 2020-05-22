@@ -30,11 +30,12 @@ function viewNews(event) {
     event.preventDefault();
 
     preloader.classList.remove('preloader_hidden');
+    resulSection.classList.add('result_hidden');
     requestError.classList.add('results-error_hidden');
 
     const query = event.target[0].value;
 
-    const dateParameters = dateHelper.GetNewsApiDateInterval();
+    const dateParameters = DateHelper.GetNewsApiDateInterval();
 
     newsApiClient.getNews(dateParameters.from, dateParameters.to, query, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY)
         .then(res => {

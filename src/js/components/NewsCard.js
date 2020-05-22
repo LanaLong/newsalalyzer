@@ -16,8 +16,8 @@ class NewsCard {
             // this.newsImgLink = defaultImage;
         }
 
-        const newsDate = dateHelper.ToNewsDateFormat(this.newsDate);
-        const newsDateTag = dateHelper.ToDateTagFormat(this.newsDate);
+        const newsDate = DateHelper.ToNewsDateFormat(this.newsDate);
+        const newsDateTag = DateHelper.ToDateTagFormat(this.newsDate);
 
         return `
             <a href="${this.newsLink}" class="result__item result__item_hidden" target="_blank">

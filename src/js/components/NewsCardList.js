@@ -6,10 +6,10 @@ class NewsCardList {
 
     createCardList(articles) {
         while (this.resultItems.firstChild) {
-            this.resultItems.removeChild(resultItems.lastChild);
+            this.resultItems.removeChild(this.resultItems.lastChild);
         }
 
-        data.forEach(article => {
+        articles.forEach(article => {
             const newsArgs = {
                 link: article.url,
                 imgLink: article.urlToImage,
