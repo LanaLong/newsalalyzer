@@ -1,4 +1,4 @@
-import { dateHelper } from "../utils/dateHelper"
+import { DateHelper } from "../utils/DateHelper"
 
 class NewsCard {
     constructor(newsLink, newsImgLink, newsDate, newsTitle, newsText, newsSource) {

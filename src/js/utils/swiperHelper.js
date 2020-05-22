@@ -1,4 +1,4 @@
-class swiperHelper {
+class SwiperHelper {
 
     static GetContainerName() {
         return '.swiper-container';
@@ -25,4 +25,4 @@ class swiperHelper {
     }
 }
 
-export { swiperHelper };
+export { SwiperHelper };

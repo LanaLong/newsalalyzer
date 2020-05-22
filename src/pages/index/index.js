@@ -1,12 +1,12 @@
 import './index.css';
 import { NewsApi } from '../../js/modules/NewsApi';
-import { queryBuider } from '../../js/utils/queryBuilder';
+import { QueryBuider } from '../../js/utils/QueryBuilder';
 import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
 import { SearchInput } from '../../js/components/SearchInput';
 import { NewsCard } from '../../js/components/NewsCard';
-import { dateHelper } from '../../js/utils/dateHelper';
+import { DateHelper } from '../../js/utils/DateHelper';
 
 const searchError = document.querySelector('.search__error');
 const resulSection = document.querySelector('.result');
@@ -15,7 +15,7 @@ const noResults = document.querySelector('.no-results');
 const requestError = document.querySelector('.no-results_type_error');
 const showMoreButton = document.querySelector('.result__button');
 
-const newsQueryBuilder = new queryBuider(NEWS_API_URL);
+const newsQueryBuilder = new QueryBuider(NEWS_API_URL);
 const newsApiClient = new NewsApi(newsQueryBuilder);
 
 const dataStorage = new DataStorage();

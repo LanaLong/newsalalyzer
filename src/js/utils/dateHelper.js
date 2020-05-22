@@ -1,4 +1,4 @@
-class dateHelper {
+class DateHelper {
     static ToNewsDateFormat(newsDate) {
         const date = new Date(newsDate);
         const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
@@ -71,4 +71,4 @@ class dateHelper {
     }
 }
 
-export { dateHelper };
+export { DateHelper };

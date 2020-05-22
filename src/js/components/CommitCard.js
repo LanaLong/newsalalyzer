@@ -1,4 +1,4 @@
-import { dateHelper } from '../utils/dateHelper';
+import { DateHelper } from '../utils/DateHelper';
 
 
 class CommitCard {

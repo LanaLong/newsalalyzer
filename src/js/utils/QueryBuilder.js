@@ -1,4 +1,4 @@
-class queryBuider {
+class QueryBuider {
     constructor(url) {
         this.url = url;
     }
@@ -70,4 +70,4 @@ class queryBuider {
 
 }
 
-export { queryBuider };
+export { QueryBuider };
