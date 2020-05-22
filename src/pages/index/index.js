@@ -71,7 +71,6 @@ function viewNews(event) {
             input.unblock();
             requestError.classList.remove('results-error_hidden');
         });
-
 }
 
 function setCardsVisibility() {
@@ -131,7 +130,6 @@ function initPage() {
     if (typeof (searchText) != 'undefined' && searchText != '') {
         input.setText(searchText);
     }
-
 }
 
 initPage();

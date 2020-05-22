@@ -1,6 +1,5 @@
 import { DateHelper } from '../utils/DateHelper';
 
-
 class CommitCard {
     constructor(commitData) {
         this.commitDate = commitData.date;

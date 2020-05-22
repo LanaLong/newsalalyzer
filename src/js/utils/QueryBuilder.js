@@ -30,7 +30,6 @@ class QueryBuider {
         return this;
     }
 
-
     build() {
 
         let queryString = '';

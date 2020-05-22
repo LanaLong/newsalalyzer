@@ -1,4 +1,4 @@
-import '../../vendor/swiper/swiper.min.css';
+import '../../../node_modules/swiper/css/swiper.min.css';
 import './about.css';
 import { QueryBuider } from '../../js/utils/QueryBuilder';
 import { GitHubApi } from '../../js/modules/GitHubApi';
@@ -7,9 +7,7 @@ import { CommitCard } from '../../js/components/CommitCard';
 import { GITHUB_API_URL } from '../../js/constants/constants';
 import { SwiperHelper } from '../../js/utils/SwiperHelper';
 
-
 import Swiper from 'swiper';
-
 
 const githubQueryBuilder = new QueryBuider(GITHUB_API_URL);
 const githubClient = new GitHubApi(githubQueryBuilder);
