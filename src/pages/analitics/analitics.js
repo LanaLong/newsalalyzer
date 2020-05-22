@@ -20,8 +20,8 @@ const parsedStatistics = JSON.parse(dataStorage.getStatistics());
 Object.keys(parsedStatistics)
     .sort()
     .forEach(function (key, index) {
-        let statisticsInfo = parsedStatistics[key];
+        const statisticsInfo = parsedStatistics[key];
 
-        let statisticsLine = new Statistics(statisticsInfo.date, statisticsInfo.articlesCount);
+        const statisticsLine = new Statistics(statisticsInfo.date, statisticsInfo.articlesCount);
         schemeItems.insertAdjacentHTML('beforeend', statisticsLine.createSchemeItem());
     });

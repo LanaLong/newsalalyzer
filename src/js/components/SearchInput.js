@@ -9,14 +9,14 @@ class SearchInput {
 
     setSubmitListener(submitCallback) {
         this.searchForm.addEventListener('submit', submitCallback);
-
-        return this;
     }
 
     setInputListener(inputListener) {
         this.searchInput.addEventListener('input', inputListener);
+    }
 
-        return this;
+    setText(text) {
+        this.searchInput.value = text;
     }
 
     block() {
