@@ -61,7 +61,6 @@ function viewNews(event) {
         })
         .catch(error => {
             requestError.classList.remove('results-error_hidden');
-            return Promise.reject(`Ошибка: ${error}`);
         });
 }
 

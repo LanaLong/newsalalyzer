@@ -23,9 +23,6 @@ function viewCommits() {
             commitCardList.createCommitCardList(res);
             const swiper = new Swiper(SwiperHelper.GetContainerName(), SwiperHelper.GetOptions());
 
-        })
-        .catch(error => {
-            return Promise.reject(`Ошибка: ${error}`);
         });
 };
 
