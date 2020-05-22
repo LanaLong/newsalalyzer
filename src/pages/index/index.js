@@ -1,7 +1,7 @@
 import './index.css';
 import { NewsApi } from '../../js/modules/NewsApi';
 import { queryBuider } from '../../js/utils/queryBuilder';
-import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE } from '../../js/constants/constants';
+import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
 import { SearchInput } from '../../js/components/SearchInput';
@@ -36,7 +36,7 @@ function viewNews(event) {
 
     const dateParameters = dateHelper.GetNewsApiDateInterval();
 
-    newsApiClient.getNews(dateParameters.from, dateParameters.to, query, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE)
+    newsApiClient.getNews(dateParameters.from, dateParameters.to, query, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY)
         .then(res => {
 
             if (res.articles.length == 0) {
