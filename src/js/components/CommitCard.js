@@ -2,18 +2,18 @@ import { DateHelper } from '../utils/DateHelper';
 
 
 class CommitCard {
-    constructor(commitDate, ghAvatar, commitAuthor, commitEmail, commitText) {
-        this.commitDate = commitDate;
-        this.ghAvatar = ghAvatar;
-        this.commitAuthor = commitAuthor;
-        this.commitEmail = commitEmail;
-        this.commitText = commitText;
+    constructor(commitData) {
+        this.commitDate = commitData.date;
+        this.ghAvatar = commitData.avatar;
+        this.commitAuthor = commitData.author;
+        this.commitEmail = commitData.email;
+        this.commitText = commitData.text;
     }
 
-    createMarkup(data) {
+    createMarkup() {
 
-        const commitDate = dateHelper.ToCommitDateFormat(this.commitDate);
-        const commitDateTag = dateHelper.ToDateTagFormat(this.commitDate);
+        const commitDate = DateHelper.ToCommitDateFormat(this.commitDate);
+        const commitDateTag = DateHelper.ToDateTagFormat(this.commitDate);
 
         return `
         <div class="swiper-slide slider__swiper-slide">

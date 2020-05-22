@@ -4,10 +4,19 @@ class CommitCardList {
         this.sliderWrapper = document.querySelector('.slider__swiper-wrapper');
     }
 
-    createCommitCardList(data) {
+    createCommitCardList(commits) {
 
-        data.slice(0, 20).forEach(item => {
-            let commitCard = this.createCommitCard(item.commit.author.date, item.author.avatar_url, item.author.login, item.commit.committer.email, item.commit.message);
+        commits.slice(0, 20).forEach(item => {
+
+            const commitArgs = {
+                date: item.commit.author.date,
+                avatar: item.author.avatar_url,
+                login: item.author.login,
+                email: item.commit.committer.email,
+                text: item.commit.message
+            };
+
+            const commitCard = this.createCommitCard(commitArgs);
 
             this.sliderWrapper.insertAdjacentHTML('beforeend', commitCard.createMarkup());
         });

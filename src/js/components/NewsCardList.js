@@ -4,13 +4,21 @@ class NewsCardList {
         this.createCard = createCard;
     }
 
-    createCardList(data) {
+    createCardList(articles) {
         while (this.resultItems.firstChild) {
             this.resultItems.removeChild(resultItems.lastChild);
         }
 
         data.forEach(article => {
-            let newsCard = this.createCard(article.url, article.urlToImage, article.publishedAt, article.title, article.description, article.source.name);
+            const newsArgs = {
+                link: article.url,
+                imgLink: article.urlToImage,
+                date: article.publishedAt,
+                title: article.title,
+                text: article.description,
+                source: article.source.name
+            }
+            const newsCard = this.createCard(newsArgs);
 
             this.resultItems.insertAdjacentHTML('afterbegin', newsCard.createMarkup());
         });

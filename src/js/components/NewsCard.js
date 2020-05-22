@@ -1,13 +1,13 @@
 import { DateHelper } from "../utils/DateHelper"
 
 class NewsCard {
-    constructor(newsLink, newsImgLink, newsDate, newsTitle, newsText, newsSource) {
-        this.newsLink = newsLink;
-        this.newsImgLink = newsImgLink;
-        this.newsDate = newsDate;
-        this.newsTitle = newsTitle;
-        this.newsText = newsText;
-        this.newsSource = newsSource;
+    constructor(newsData) {
+        this.newsLink = newsData.link;
+        this.newsImgLink = newsData.imgLink;
+        this.newsDate = newsData.date;
+        this.newsTitle = newsData.title;
+        this.newsText = newsData.text;
+        this.newsSource = newsData.source;
     }
 
     createMarkup(data) {
