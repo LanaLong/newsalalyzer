@@ -1,7 +1,7 @@
 import './index.css';
 import { NewsApi } from '../../js/modules/NewsApi';
 import { QueryBuider } from '../../js/utils/QueryBuilder';
-import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY } from '../../js/constants/constants';
+import { NEWS_API_URL, NEWS_API_REQUEST_PAGE_SIZE, NEWS_API_REQUEST_LANGUAGE, NEWS_API_KEY, CARDS_TO_SHOW_COUNT } from '../../js/constants/constants';
 import { DataStorage } from '../../js/modules/DataStorage';
 import { NewsCardList } from '../../js/components/NewsCardList';
 import { SearchInput } from '../../js/components/SearchInput';
@@ -75,7 +75,7 @@ function setCardsVisibility() {
             resultVisibleCardsCount++;
         }
 
-        if (shownCardsCount < 3 && item.classList.contains('result__item_hidden')) {
+        if (shownCardsCount < CARDS_TO_SHOW_COUNT && item.classList.contains('result__item_hidden')) {
             shownCardsCount++;
             resultVisibleCardsCount++;
             item.classList.remove('result__item_hidden');
