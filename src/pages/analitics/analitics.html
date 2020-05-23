@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | новости, анализ новостей, сервис новостей, события, информация о событиях, новости недели">
+    <meta name="description"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | News analizing service">
+    <meta name="author" lang="ru" content="LanaLong">
+
+    <title>NewsAnalyzer | Аналитика</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
+    <link rel="shortcut icon" href="<%=require('../../images/favicon.ico').default%>" type="image/ico">
+</head>
+
+<body class="page">
+    <header class="header header_type_inner">
+        <div class="container header__container">
+            <a href="index.html" class="logo link logo_type_inner">NewsAnalyzer</a>
+            <nav class="nav nav_type_inner">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link link nav__link_type_inner">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="link nav__link nav__link_type_inner">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="breadcrumbs">
+            <div class="container breadcrumbs__container">
+                <ul class="breadcrumbs__items">
+                    <li class="text breadcrumbs__item">
+                        <a href="./index.html" class="link breadcrumbs__link">Главная &#47;&nbsp;</a>
+                    </li>
+                    <li class="text breadcrumbs__item">
+                        <a href="./analitics.html"
+                            class="link breadcrumbs__link breadcrumbs__link_type_disabled nav__link_type_inner">Аналитика</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="midheader">
+            <div class="container midheader__cantainer">
+                <h2 class="title midheader__title">Вы спросили «<span class="request_type_midheader"
+                        id="keyWord">Путешествия</span>»
+                </h2>
+                <p class="text midheader__info">Новостей за неделю: <span class="request_type_number"
+                        id="weekCount">129</span></p>
+                <p class="text midheader__info">Упоминаний в заголовках: <span class="request_type_number"
+                        id="titleCount">114</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="scheme">
+            <div class="container scheme__container">
+                <div class="scheme__chart">
+                    <h3 class="title scheme__title">Аналитика по дням</h3>
+                    <div class="scheme__header">
+                        <div class="text scheme__cell-title">дата (<span class="data-month">август</span>)</div>
+                        <div class="text scheme__cell-title">кол-во упоминаний</div>
+                    </div>
+                    <div class="text scheme__scale">
+                        <p class="scheme__scale-value">0</p>
+                        <p class="scheme__scale-value">25</p>
+                        <p class="scheme__scale-value">50</p>
+                        <p class="scheme__scale-value">75</p>
+                        <p class="scheme__scale-value">100</p>
+                    </div>
+
+                    <div class="text scheme__items"></div>
+
+                    <div class="text scheme__scale">
+                        <p class="scheme__scale-value">0</p>
+                        <p class="scheme__scale-value">25</p>
+                        <p class="scheme__scale-value">50</p>
+                        <p class="scheme__scale-value">75</p>
+                        <p class="scheme__scale-value">100</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content text">
+                <p class="footer__copy">&copy; 2020 NewsAnalyzer</p>
+                <!-- NewsAnalyzer | Powered by News API -->
+                <nav class="footer__nav">
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="link footer__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="about.html">О проекте</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="https://praktikum.yandex.ru"
+                                target="_blank">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__icons">
+                    <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
+                        <img src="<%=require('../../images/icon/gh.svg').default%>" class="footer__icon" alt="github">
+                    </a>
+                    <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
+                        <img src="<%=require('../../images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
+</body>
+
+</html>

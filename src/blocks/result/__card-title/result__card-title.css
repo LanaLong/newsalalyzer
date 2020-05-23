@@ -1,17 +1,19 @@
 .result__card-title {
-    margin: 12px 0;
+    display: flex;
+    align-self: flex-start;
     font-size: 26px;
     line-height: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    margin: 12px 0;
 }
 
 @media screen and (max-width: 1024px) {
     .result__card-title {
         font-size: 24px;
         line-height: 28px;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow-y: hidden;;
     }
 }
 

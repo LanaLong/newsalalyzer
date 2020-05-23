@@ -6,8 +6,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .footer__items {
-    }
 }
 
 @media screen and (max-width: 385px) {
@@ -17,6 +15,4 @@
 }
 
 @media screen and (max-width: 320px) {
-    .footer__items {
-    }
 }

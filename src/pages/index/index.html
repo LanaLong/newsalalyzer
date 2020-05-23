@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | новости, анализ новостей, сервис новостей, события, информация о событиях, новости недели">
+    <meta name="description"
+        content="NewsAnalyzer | Сервис для анализа происходящих в мире событий | News analizing service">
+    <meta name="author" lang="ru" content="LanaLong">
+
+    <title>NewsAnalyzer | Главная</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+    <link rel="shortcut icon" href="<%=require('../../images/favicon.ico').default%>" type="image/ico">
+</head>
+
+<body class="page">
+    <section class="search">
+        <header class="header header_type_index">
+            <div class="container header__container">
+                <a href="index.html" class="logo link logo_type_index">NewsAnalyzer</a>
+
+                <nav class="nav nav_type_index">
+                    <ul class="nav__items">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link nav__link_type_active-index link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="link nav__link">О проекте</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="container search__container">
+            <div class="search__wrapper">
+                <h1 class="title search__title">Что в мире творится?</h1>
+                <p class="text search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной
+                    она&nbsp;была в
+                    новостях за прошедшую неделю.</p>
+                <form name="search" class="text search__form">
+                    <input type="text" name="search" class="search__input" placeholder="Введите тему новости"
+                        minlength="2" maxlength="20" name="keyword" required>
+                    <button type="submit" class="search__button">Искать</button>
+                </form>
+                <span class="search__error search__error_hide">Нужно ввести ключевое слово</span>
+            </div>
+        </section>
+    </section>
+
+    <main>
+        <section class="preloader preloader_hidden">
+            <div class="container preloader__container">
+                <i class="preloader__icon"></i>
+                <p class="preloader__text text_type_minor">Идет поиск новостей...</p>
+            </div>
+        </section>
+
+        <section class="no-results no-results_hidden">
+            <div class="container no-results__container">
+                <img src="<%=require('../../images/not-found.svg').default%>" alt="Ничего не найдено"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Ничего не найдено</h3>
+                <p class="no-results__subtitle text_type_minor">К сожалению, по вашему запросу ничего&nbsp;не найдено.
+                </p>
+            </div>
+        </section>
+
+        <section class="no-results no-results_type_error no-results_hidden">
+            <div class="container no-results__container">
+                <img src="<%=require('../../images/not-found.svg').default%>" alt="Произошла ошибка"
+                    class="no-results__img">
+                <h3 class="title no-results__title">Произошла ошибка</h3>
+                <p class="no-results__subtitle text_type_minor">Во время запроса произошла ошибка. Возможно, проблема с
+                    соединением или сервер недоступен. Подождите немного и
+                    попробуйте ещё раз
+                </p>
+            </div>
+        </section>
+
+        <section class="result result_hidden">
+            <div class="container result__container">
+                <div class="result__header">
+                    <h2 class="title result__header-title">Результаты поиска</h2>
+                    <div class="result__link-container">
+                        <a href="analitics.html" class="text link result__link">Посмотреть аналитику</a>
+                        <img src="<%=require('../../images/icon/back.svg').default%>" alt="Back arrow"
+                            class="result__icon">
+                    </div>
+                </div>
+
+                <div class="result__items"></div>
+
+                <button class="text result__button">Показать еще</button>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container about__container">
+                <picture class="about__avatar">
+                    <source srcset="<%=require('../../images/avatar-mobile.png').default%>" media="(max-width: 475px)">
+                    <img src="<%=require('../../images/avatar-big.png').default%>" alt="Аватар автора"
+                        class="about__avatar">
+                </picture>
+
+                <article class="about__content">
+                    <h2 class="title about__title">Об авторе</h2>
+                    <p class="text about__text">Это блок с описанием автора проекта. Здесь следует указать, как вас
+                        зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+                    <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы
+                        научились, и чем можете помочь потенциальным заказчикам.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="text footer__content">
+                <p class="footer__copy">&copy; 2020 NewsAnalyzer</p>
+                <!-- NewsAnalyzer | Powered by News API -->
+                <nav class="footer__nav">
+                    <ul class="footer__items">
+                        <li class="footer__item">
+                            <a class="link footer__link" href="index.html">Главная</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="about.html">О проекте</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="https://praktikum.yandex.ru"
+                                target="_blank">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__icons">
+                    <a class="footer__icon-link" href="https://github.com/LanaLong" target="_blank">
+                        <img src="<%=require('../../images/icon/gh.svg').default%>" class="footer__icon" alt="github">
+                    </a>
+                    <a class="footer__icon-link" href="https://www.facebook.com/" target="_blank">
+                        <img src="<%=require('../../images/icon/fb.svg').default%>" class="footer__icon" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+</body>
+
+</html>

@@ -1,20 +1,13 @@
 .search__form {
-    max-width: 608px;
-    background: #FFFFFF;
-    box-sizing: border-box;
-    backdrop-filter: blur(8px);
-    border-radius: 50px; 
+    display: block;
+    position: relative;
     height: 64px;  
-    display: flex;
-    justify-content: space-between;
-}
-
-.search__form:focus {
-    border: 1px solid rgba(255, 255, 255, .5)
+    background: #FFFFFF;
+    border-radius: 50px; 
 }
 
 .search__form:focus-within {
-    border: 2px solid rgba(255, 255, 255, .5)
+    border: 2px solid #2f71e5;
 }
 
 @media screen and (max-width: 768px) {

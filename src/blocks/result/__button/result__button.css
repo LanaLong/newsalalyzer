@@ -15,6 +15,10 @@
     background-color: rgba(255, 255, 255, .9);
 }
 
+.result__button:focus {
+   outline: none;
+}
+
 @media screen and (max-width: 768px) {
     .result__button  {
         padding: 16px 61px;

@@ -1,7 +1,7 @@
 .result__items {
      display: flex;
-     flex-wrap: nowrap;
-     justify-content: space-between;
+     flex-wrap: wrap;
+     justify-content: center;
      padding-bottom: 64px;
 }
 

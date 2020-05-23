@@ -1,5 +1,9 @@
 .result__info {
-    padding: 20px 24px 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 24px 0;
 }
 
 @media screen and (max-width: 768px) {

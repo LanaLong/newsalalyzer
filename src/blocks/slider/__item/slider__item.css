@@ -4,7 +4,7 @@
     padding: 24px;
     min-height: 288px;
     min-width: 400px;
-    margin: 0 auto;
+    margin: 0 8px;
     box-sizing: border-box;
     transition: box-shadow .3s ease;
 }
@@ -14,19 +14,16 @@
     box-shadow: 2px 7px 28px rgba(8,29,45,.1);
 }
 
-
 @media screen and (max-width:768px) {
     .slider__item {
         min-height: 242px;
         min-width: 336px;
     }
-
 }
 
 @media screen and (max-width:576px) {
-  .slider__item {
+    .slider__item {
         min-height: 264px;
         min-width: 284px;
-  }
-
+    }
 }

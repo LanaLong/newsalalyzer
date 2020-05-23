@@ -14,12 +14,7 @@
     transform: translateX(0px);
     padding-left: 40px;
   }
-
 }
 
 @media screen and (max-width:576px) {
-  .slider__swiper-wrapper {
-    /* transform: translateX(0px); */
-  }
-
 }
